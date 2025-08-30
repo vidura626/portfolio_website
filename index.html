@@ -1,312 +1,1248 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidura Rames Wijesinghe - Software Engineer Portfolio</title>
-    <meta name="description" content="Software Engineer from Galle, Sri Lanka. 2+ years experience in full-stack development, team leadership, and AI engineering.">
+    <meta name="description"
+        content="Software Engineer from Galle, Sri Lanka. 2+ years experience in full-stack development, team leadership, and AI engineering.">
+    <meta name="keywords"
+        content="Software Engineer, Full Stack Developer, React, Spring Boot, Team Lead, AI Engineering">
+    <meta name="author" content="Vidura Rames Wijesinghe">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="nav-bar">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="cursor">
+        <div class="cursor-inner"></div>
+    </div>
+
+    <!-- Navigation Header Component -->
+    <nav class="nav-header" id="navigation">
         <div class="container">
-            <div class="nav-content">
-                <div class="nav-brand">
-                    <h2>Vidura</h2>
+            <div class="nav-wrapper">
+                <div class="nav-brand" data-cursor="pointer">
+                    <h2 class="typing-text">Vidura</h2>
                 </div>
                 <div class="nav-menu" id="navMenu">
-                    <a href="#home" class="nav-link">Home</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#experience" class="nav-link">Experience</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#home" class="nav-link" data-section="home" data-cursor="pointer">Home</a>
+                    <a href="#about" class="nav-link" data-section="about" data-cursor="pointer">About</a>
+                    <a href="#experience" class="nav-link" data-section="experience"
+                        data-cursor="pointer">Experience</a>
+                    <a href="#projects" class="nav-link" data-section="projects" data-cursor="pointer">Projects</a>
+                    <a href="#skills" class="nav-link" data-section="skills" data-cursor="pointer">Skills</a>
+                    <a href="#contact" class="nav-link" data-section="contact" data-cursor="pointer">Contact</a>
                 </div>
-                <div class="nav-actions">
-                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                        <span class="theme-icon">🌙</span>
+                <div class="nav-controls">
+                    <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle theme" data-cursor="pointer">
+                        <div class="theme-toggle-track">
+                            <div class="theme-toggle-thumb">
+                                <span class="theme-icon">🌙</span>
+                            </div>
+                        </div>
                     </button>
-                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
-                        <span class="hamburger"></span>
-                        <span class="hamburger"></span>
-                        <span class="hamburger"></span>
+                    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu">
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
                     </button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Hero Section Component -->
+    <section id="home" class="hero-component">
+        <div class="parallax-bg">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+        </div>
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        Hi, I'm <span class="text-accent">Vidura Rames</span><br>
-                        Software Engineer
-                    </h1>
-                    <p class="hero-description">
-                        Passionate Software Engineer with 2+ years of experience specializing in full-stack development. 
-                        Proven track record of rapid career growth from Trainee to Team Lead within 9 months.
-                    </p>
-                    <div class="hero-actions">
-                        <button class="btn btn--primary">Download CV</button>
-                        <a href="#projects" class="btn btn--outline">View Projects</a>
+            <div class="hero-layout">
+                <div class="hero-content" data-animate="staggerFadeUp">
+                    <div class="hero-badge" data-animate-delay="0">
+                        <div class="status-indicator"></div>
+                        <span class="badge-text">Available for opportunities</span>
                     </div>
-                    <div class="hero-social">
-                        <a href="mailto:vidurawijesinghemap@gmail.com" class="social-link" target="_blank">
-                            <span class="social-icon">📧</span>
+                    <h1 class="hero-title" data-animate-delay="1">
+                        <span class="greeting">Hi, I'm</span>
+                        <span class="title-accent typing-effect" data-text="Vidura Rames">Vidura Rames</span><br>
+                        <span class="role-text">Software Engineer & Team Lead</span>
+                    </h1>
+                    <p class="hero-description" data-animate-delay="2">
+                        Passionate Software Engineer with 2+ years of experience specializing in full-stack development.
+                        Proven track record of rapid career growth from Trainee to Team Lead within 9 months.
+                        Currently expanding expertise in AI Engineering.
+                    </p>
+                    <div class="hero-stats" data-animate-delay="3">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="2">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <!-- <div class="stat-divider"></div> -->
+                        <!-- <div class="stat-item"> -->
+                        <!-- <span class="stat-number" data-count="9">0</span> -->
+                        <!-- <span class="stat-label">Months to Lead</span> -->
+                        <!-- </div> -->
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="8">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions" data-animate-delay="4">
+                        <!-- <button class="btn btn--primary btn--animated" id="downloadCV" data-cursor="pointer">
+                            <span class="btn-content">
+                                <span class="btn-text">Download CV</span>
+                                <span class="btn-icon">📄</span>
+                            </span>
+                            <div class="btn-ripple"></div>
+                        </button> -->
+                        <a href="#projects" class="btn btn--outline btn--animated" data-cursor="pointer">
+                            <span class="btn-content">
+                                <span class="btn-text">View Projects</span>
+                                <span class="btn-icon">🚀</span>
+                            </span>
+                            <div class="btn-ripple"></div>
                         </a>
-                        <a href="https://github.com/vidura626" class="social-link" target="_blank">
-                            <span class="social-icon">🔗</span>
+                    </div>
+                    <div class="hero-social" data-animate-delay="5">
+                        <!-- <a href="mailto:contact@vidurawijesinghe.com" class="social-btn" target="_blank" -->
+                        <a href="mailto:contact@vidurawijesinghe.com" class="social-btn" target="_blank"
+                            aria-label="Email" data-cursor="pointer">
+                            <!-- <span class="social-icon">📧</span> -->
+                            <p>Email Me</p>
                         </a>
-                        <a href="https://lk.linkedin.com/in/vidurawije626" class="social-link" target="_blank">
-                            <span class="social-icon">💼</span>
+                        <!-- <a href="https://github.com/vidura626" class="social-btn" target="_blank" aria-label="GitHub" -->
+                        <a href="https://github.com/vidura626" class="social-btn" target="_blank" aria-label="GitHub"
+                            data-cursor="pointer">
+                            <!-- <span class="social-icon">💻</span> -->
+                            <p>GitHub</p>
+                        </a>
+                        <!-- <a href="https://lk.linkedin.com/in/vidurawije626" class="social-btn" target="_blank" -->
+                        <a href="https://lk.linkedin.com/in/vidurawije626" class="social-btn" target="_blank"
+                            aria-label="LinkedIn" data-cursor="pointer">
+                            <!-- <span class="social-icon">🔗</span> -->
+                            <p>LinkedIn</p>
                         </a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <div class="image-placeholder">
-                        <span class="profile-icon">👨‍💻</span>
-                    </div>
-                    <div class="floating-cards">
-                        <div class="floating-card">
-                            <span class="card-icon">🚀</span>
-                            <span class="card-text">Team Lead</span>
+                <div class="hero-visual" data-animate="fadeInRight">
+                    <div class="profile-container">
+                        <div class="profile-image">
+                            <!-- <span class="profile-avatar">👨‍💻</span> -->
+                            <div class="profile-avatar"></div>
+                            <img style=" width: 100%; height: 100%; object-fit: cover;" src="./image.png" alt="">
                         </div>
-                        <div class="floating-card">
-                            <span class="card-icon">💡</span>
-                            <span class="card-text">AI Engineer</span>
+
+                        <div class="floating-elements">
+                            <div class="float-card" data-float="4">
+                                <span class="float-icon">🛠️</span>
+                                <span class="float-text">DevOps</span>
+                            </div>
+                            <div class="float-card" data-float="2">
+                                <span class="float-icon">🤖</span>
+                                <span class="float-text">AI Engineer</span>
+                            </div>
+                            <div class="float-card" data-float="3">
+                                <span class="float-icon">⚡</span>
+                                <span class="float-text">Full Stack</span>
+                            </div>
+                            <div class="float-card" data-float="1">
+                                <span class="float-icon">🚀</span>
+                                <span class="float-text">Team Lead</span>
+                            </div>
                         </div>
-                        <div class="floating-card">
-                            <span class="card-icon">⚡</span>
-                            <span class="card-text">Full Stack</span>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
+    <!-- About Section Component -->
+    <section id="about" class="about-component">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Get to know more about my background and journey</p>
+                <p class="section-subtitle">Get to know more about my background, journey, and passions</p>
             </div>
-            <div class="about-content">
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <h3 class="stat-number" data-count="2">0</h3>
-                        <p class="stat-label">Years Experience</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3 class="stat-number" data-count="8">0</h3>
-                        <p class="stat-label">Projects Completed</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3 class="stat-number" data-count="9">0</h3>
-                        <p class="stat-label">Months to Team Lead</p>
-                    </div>
-                </div>
-                <div class="about-details">
-                    <div class="detail-section">
-                        <h3>Education</h3>
-                        <div class="education-item">
-                            <h4>BSc (Hons) Software Engineering</h4>
-                            <p>Cardiff Metropolitan University (ICBT Campus) • 2025-2026</p>
-                            <span class="status status--warning">In Final Semester</span>
+            <div class="about-layout">
+                <div class="about-info">
+                    <div class="info-card interactive-card" data-animate="fadeUp">
+                        <div class="card-header">
+                            <h3>🎓 Education Journey</h3>
+                            <div class="card-accent"></div>
                         </div>
-                        <div class="education-item">
-                            <h4>Graduate Diploma in Software Engineering (GDSE)</h4>
-                            <p>Institute of Software Engineering (IJSE) - Panadura • 2022-2024</p>
-                            <span class="status status--success">Completed</span>
-                        </div>
-                    </div>
-                    <div class="detail-section">
-                        <h3>Current Learning</h3>
-                        <div class="certification-item">
-                            <h4>IBM AI Engineering Professional Certification</h4>
-                            <p>Coursera • Ongoing</p>
-                            <span class="status status--info">In Progress</span>
-                        </div>
-                    </div>
-                    <div class="detail-section">
-                        <h3>Languages</h3>
-                        <div class="language-item">
-                            <span class="language">Sinhala</span>
-                            <span class="level">Native</span>
-                        </div>
-                        <div class="language-item">
-                            <span class="language">English</span>
-                            <span class="level">Professional</span>
+                        <div class="education-timeline">
+                            <div class="edu-item">
+                                <div class="edu-marker current"></div>
+                                <div class="edu-content">
+                                    <h4>BSc (Hons) Software Engineering</h4>
+                                    <p>Cardiff Metropolitan University (ICBT Campus)</p>
+                                    <span class="edu-period">2025-2026</span>
+                                    <span class="status status--warning">Final Semester</span>
+                                    <div class="edu-details">
+                                        <p>Currently in final semester, course ending September 2025. Graduation
+                                            expected February 2026.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="edu-item">
+                                <div class="edu-marker completed"></div>
+                                <div class="edu-content">
+                                    <h4>Graduate Diploma in Software Engineering (GDSE)</h4>
+                                    <p>Institute of Software Engineering (IJSE) - Panadura</p>
+                                    <span class="edu-period">2022-2024</span>
+                                    <span class="status status--success">Completed</span>
+                                    <div class="edu-details">
+                                        <p>Comprehensive software engineering program covering full-stack development
+                                            practices.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Work Experience</h2>
-                <p class="section-subtitle">My professional journey and career progression</p>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Team Lead & Software Engineer</h3>
-                        <h4>QunatacomIT(pvt)Ltd</h4>
-                        <p class="timeline-period">January 2024 - September 2024</p>
-                        <ul class="timeline-responsibilities">
-                            <li>Involved in client and management meetings</li>
-                            <li>Trained and managed trainee developers</li>
-                            <li>Managed project tasks and milestones</li>
-                            <li>Completed Research & Development parts of projects</li>
-                            <li>Played QA and BA roles with relevant departments</li>
+                    <div class="info-card interactive-card" data-animate="fadeUp">
+                        <div class="card-header">
+                            <h3>📚 Current Learning</h3>
+                            <div class="card-accent"></div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon">🎓</div>
+                            <div class="cert-details">
+                                <h4>IBM AI Engineering Professional Certification</h4>
+                                <p>Coursera • Ongoing</p>
+                                <div class="progress-indicator">
+                                    <div class="progress-circle">
+                                        <svg viewBox="0 0 36 36">
+                                            <path class="progress-bg"
+                                                d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831a 15.9155 15.9155 0 0 1 0 -31.831">
+                                            </path>
+                                            <path class="progress-fill" stroke-dasharray="75, 100"
+                                                d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831a 15.9155 15.9155 0 0 1 0 -31.831">
+                                            </path>
+                                        </svg>
+                                        <div class="progress-text">75%</div>
+                                    </div>
+                                    <span class="progress-label">Advanced certification covering machine learning, deep
+                                        learning, and AI engineering practices</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card interactive-card" data-animate="fadeUp">
+                        <div class="card-header">
+                            <h3>🌍 Languages</h3>
+                            <div class="card-accent"></div>
+                        </div>
+                        <div class="language-grid">
+                            <div class="lang-item">
+                                <div class="lang-info">
+                                    <span class="lang-name">Sinhala</span>
+                                    <span class="lang-details">Native speaker</span>
+                                </div>
+                                <div class="lang-level native">
+                                    <span class="level-dots">
+                                        <span class="dot active"></span>
+                                        <span class="dot active"></span>
+                                        <span class="dot active"></span>
+                                        <span class="dot active"></span>
+                                        <span class="dot active"></span>
+                                    </span>
+                                    <span class="level-text">Native</span>
+                                </div>
+                            </div>
+                            <div class="lang-item">
+                                <div class="lang-info">
+                                    <span class="lang-name">English</span>
+                                    <span class="lang-details">Professional proficiency - handled meetings and client
+                                        communications</span>
+                                </div>
+                                <div class="lang-level professional">
+                                    <span class="level-dots">
+                                        <span class="dot active"></span>
+                                        <span class="dot active"></span>
+                                        <span class="dot active"></span>
+                                        <span class="dot active"></span>
+                                        <span class="dot"></span>
+                                    </span>
+                                    <span class="level-text">Professional</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card interactive-card" data-animate="fadeUp">
+                        <div class="card-header">
+                            <h3>🔬 Research & Interests</h3>
+                            <div class="card-accent"></div>
+                        </div>
+                        <div class="interests-grid">
+                            <div class="interest-item">
+                                <span class="interest-icon">📚</span>
+                                <span class="interest-text">Reader & Researcher</span>
+                            </div>
+                            <div class="interest-item">
+                                <span class="interest-icon">🤖</span>
+                                <span class="interest-text">AI & Machine Learning</span>
+                            </div>
+                            <div class="interest-item">
+                                <span class="interest-icon">⚡</span>
+                                <span class="interest-text">Automation Tools</span>
+                            </div>
+                            <div class="interest-item">
+                                <span class="interest-icon">💡</span>
+                                <span class="interest-text">Innovation & R&D</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-highlights">
+                    <div class="highlight-card interactive-card" data-animate="fadeUp">
+                        <div class="highlight-icon">🏆</div>
+                        <h3>Key Achievements</h3>
+                        <ul class="achievement-list">
+                            <li>Promoted from Trainee to Team Lead within 9 months</li>
+                            <li>Successfully led multiple enterprise projects</li>
+                            <li>Handled client meetings and project management</li>
+                            <li>Trained and mentored 5+ junior developers</li>
+                            <li>Developed automation tools improving team productivity</li>
+                            <li>Contributed to Research & Development efforts for projects</li>
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Associate Software Engineer</h3>
-                        <h4>QunatacomIT(pvt)Ltd</h4>
-                        <p class="timeline-period">April 2024 - January 2024</p>
-                        <p class="timeline-note">Promoted within 4 months from trainee period</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section Component -->
+    <section id="experience" class="experience-component">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Work Experience</h2>
+                <p class="section-subtitle">My professional journey, career progression, and detailed accomplishments
+                </p>
+            </div>
+            <div class="experience-timeline">
+                <div class="timeline-item" data-animate="fadeUp">
+                    <div class="timeline-date">
+                        <span class="year">2024</span>
+                        <span class="duration">9 months</span>
+                    </div>
+                    <div class="timeline-marker active">
+                        <div class="marker-pulse"></div>
+                    </div>
+                    <div class="timeline-content expandable-card">
+                        <div class="position-header">
+                            <div class="position-title">
+                                <h3>Team Lead & Software Engineer</h3>
+                                <span class="promotion-badge">🚀 Promoted within 9 months</span>
+                            </div>
+                            <span class="company">QunatacomIT(pvt)Ltd</span>
+                            <span class="duration">January 2024 - September 2024</span>
+                        </div>
+
+                        <div class="position-summary">
+                            <p>Led development teams and managed enterprise projects while maintaining hands-on
+                                development responsibilities. Spearheaded multiple commercial projects with client
+                                interaction and team management duties.</p>
+                        </div>
+
+                        <div class="expand-toggle" data-expand="experience-1">
+                            <span class="expand-text">View Details</span>
+                            <span class="expand-icon">▼</span>
+                        </div>
+
+                        <div class="expandable-content" id="experience-1">
+                            <div class="details-grid">
+                                <div class="detail-section">
+                                    <h4>🎯 Key Responsibilities</h4>
+                                    <ul class="responsibility-list">
+                                        <li>Led client and management meetings with cross-functional teams</li>
+                                        <li>Trained and managed a team of 3-5 trainee developers</li>
+                                        <li>Managed project tasks, milestones, and delivery timelines</li>
+                                        <li>Spearheaded Research & Development initiatives for new project features</li>
+                                        <li>Collaborated with QA and BA departments in dual-role capacity</li>
+                                        <li>Developed Python automation tools to streamline repetitive development tasks
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="detail-section">
+                                    <h4>🏆 Major Achievements</h4>
+                                    <ul class="achievement-metrics">
+                                        <li>Successfully delivered 2 major enterprise projects</li>
+                                        <li>Improved team productivity through automation tools</li>
+                                        <li>Mentored 5+ junior developers in full-stack development</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="tech-stack-detailed">
+                                <h4>🔧 Technologies Used</h4>
+                                <div class="tech-categories">
+                                    <div class="tech-category">
+                                        <span class="tech-label">Frontend</span>
+                                        <div class="tech-items">
+                                            <span class="tech-tag">React (JavaScript)</span>
+                                            <span class="tech-tag">React (TypeScript)</span>
+                                            <span class="tech-tag">Redux Toolkit</span>
+                                            <span class="tech-tag">RTK Query</span>
+                                        </div>
+                                    </div>
+                                    <div class="tech-category">
+                                        <span class="tech-label">Backend</span>
+                                        <div class="tech-items">
+                                            <span class="tech-tag">Spring Boot</span>
+                                            <span class="tech-tag">Spring Cloud Gateway</span>
+                                            <span class="tech-tag">Spring Security</span>
+                                            <span class="tech-tag">Microservices</span>
+                                        </div>
+                                    </div>
+                                    <div class="tech-category">
+                                        <span class="tech-label">DevOps</span>
+                                        <div class="tech-items">
+                                            <span class="tech-tag">Docker</span>
+                                            <span class="tech-tag">Apache Kafka</span>
+                                            <span class="tech-tag">GitHub Actions</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
+
+                <div class="timeline-item" data-animate="fadeUp">
+                    <div class="timeline-date">
+                        <span class="year">2024</span>
+                        <span class="duration">4 months</span>
+                    </div>
                     <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Trainee Software Engineer</h3>
-                        <h4>QunatacomIT(pvt)Ltd</h4>
-                        <p class="timeline-period">December 2023 - April 2024</p>
+                    <div class="timeline-content expandable-card">
+                        <div class="position-header">
+                            <div class="position-title">
+                                <h3>Associate Software Engineer</h3>
+                                <span class="promotion-badge">⚡ Quick Promotion</span>
+                            </div>
+                            <span class="company">QunatacomIT(pvt)Ltd</span>
+                            <span class="duration">April 2024 - January 2024</span>
+                        </div>
+
+                        <div class="position-summary">
+                            <p>Rapidly advanced from trainee position due to exceptional performance and leadership
+                                potential. Contributed to enterprise-level applications and demonstrated strong
+                                technical and collaborative skills.</p>
+                        </div>
+
+                        <div class="expand-toggle" data-expand="experience-2">
+                            <span class="expand-text">View Details</span>
+                            <span class="expand-icon">▼</span>
+                        </div>
+
+                        <div class="expandable-content" id="experience-2">
+                            <div class="details-grid">
+                                <div class="detail-section">
+                                    <h4>🎯 Responsibilities</h4>
+                                    <ul class="responsibility-list">
+                                        <li>Developed full-stack web applications using modern frameworks</li>
+                                        <li>Collaborated with senior developers on enterprise-level projects</li>
+                                        <li>Participated in code reviews and maintained coding standards</li>
+                                        <li>Contributed to system architecture and design decisions</li>
+                                        <li>Assisted in junior developer mentoring activities</li>
+                                    </ul>
+                                </div>
+
+                                <div class="detail-section">
+                                    <h4>🏆 Achievements</h4>
+                                    <ul class="achievement-metrics">
+                                        <li>Consistently exceeded performance expectations</li>
+                                        <li>Successfully completed all assigned project modules</li>
+                                        <li>Demonstrated leadership potential leading to early promotion</li>
+                                        <li>Contributed innovative solutions to technical challenges</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-animate="fadeUp">
+                    <div class="timeline-date">
+                        <span class="year">2023</span>
+                        <span class="duration">4 months</span>
+                    </div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content expandable-card">
+                        <div class="position-header">
+                            <div class="position-title">
+                                <h3>Trainee Software Engineer</h3>
+                                <span class="promotion-badge">🌟 Foundation</span>
+                            </div>
+                            <span class="company">QunatacomIT(pvt)Ltd</span>
+                            <span class="duration">December 2023 - April 2024</span>
+                        </div>
+
+                        <div class="position-summary">
+                            <p>Started professional journey with intensive learning and practical application of
+                                enterprise development practices. Demonstrated exceptional adaptability and learning
+                                curve.</p>
+                        </div>
+
+                        <div class="expand-toggle" data-expand="experience-3">
+                            <span class="expand-text">View Details</span>
+                            <span class="expand-icon">▼</span>
+                        </div>
+
+                        <div class="expandable-content" id="experience-3">
+                            <div class="details-grid">
+                                <div class="detail-section">
+                                    <h4>🎯 Training Focus</h4>
+                                    <ul class="responsibility-list">
+                                        <li>Learned enterprise software development practices</li>
+                                        <li>Participated in training programs and workshops</li>
+                                        <li>Assisted in development of web applications</li>
+                                        <li>Gained hands-on experience with professional development tools</li>
+                                    </ul>
+                                </div>
+
+                                <div class="detail-section">
+                                    <h4>🏆 Training Outcomes</h4>
+                                    <ul class="achievement-metrics">
+                                        <li>Completed training program with distinction</li>
+                                        <li>Showed exceptional learning curve and adaptability</li>
+                                        <li>Gained proficiency in enterprise-level technologies</li>
+                                        <li>Built foundation for rapid career advancement</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
+    <!-- Projects Section Component -->
+    <section id="projects" class="projects-component">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Projects</h2>
-                <p class="section-subtitle">A showcase of my work and contributions</p>
+                <p class="section-subtitle">A comprehensive showcase of my work, contributions, and technical expertise
+                </p>
             </div>
-            <div class="project-tabs">
-                <button class="tab-button active" data-tab="industry">Industry Projects</button>
-                <button class="tab-button" data-tab="personal">Personal Projects</button>
+
+            <div class="project-controls">
+                <div class="project-tabs" role="tablist">
+                    <button class="tab-btn active" data-tab="industry" role="tab" aria-selected="true"
+                        data-cursor="pointer">
+                        <span class="tab-icon">🏢</span>
+                        <span class="tab-text">Industry Projects</span>
+                        <span class="tab-count">5</span>
+                    </button>
+                    <button class="tab-btn" data-tab="personal" role="tab" aria-selected="false" data-cursor="pointer">
+                        <span class="tab-icon">🚀</span>
+                        <span class="tab-text">Personal Projects</span>
+                        <span class="tab-count">5</span>
+                    </button>
+                </div>
+
+                <div class="project-filter">
+                    <select class="filter-dropdown" id="techFilter">
+                        <option value="">All Technologies</option>
+                        <option value="react">React</option>
+                        <option value="spring">Spring Boot</option>
+                        <option value="flutter">Flutter</option>
+                        <option value="python">Python</option>
+                        <option value="microservices">Microservices</option>
+                    </select>
+                </div>
             </div>
-            <div class="project-content">
-                <div id="industry" class="tab-panel active">
+
+
+            <div class="project-panels">
+
+                <div id="industry" class="tab-panel active" role="tabpanel">
                     <div class="project-grid">
-                        <div class="project-card">
-                            <h3>MOJ (Ministry of Justice) Project</h3>
-                            <p class="project-role">Team Lead</p>
-                            <p class="project-description">Led development of government web application with microservices architecture</p>
+
+                        <!-- MOJ Project -->
+                        <div class="project-card featured interactive-card" data-animate="fadeUp"
+                            data-tech="react spring microservices">
+                            <div class="project-badge">Featured</div>
+                            <div class="project-header">
+                                <div class="project-title-row">
+                                    <h3>MOJ (Ministry of Justice) Project</h3>
+                                    <div class="project-status">
+                                        <span class="status-dot completed"></span>
+                                        <span class="status-text">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="project-role">Team Lead</span>
+                                    <span class="project-duration">10 months</span>
+                                </div>
+                            </div>
+
+                            <p class="project-description">
+                                Large-scale government web application for the Ministry of Justice with complex
+                                role-based authentication and document management system. Led the entire development
+                                lifecycle from requirements gathering to deployment.
+                            </p>
+
+                            <div class="project-highlights">
+                                <h4>Key Features & Achievements</h4>
+                                <ul class="feature-list">
+                                    <li>Dynamic role-based authentication with JWT security</li>
+                                    <li>Microservices architecture with Spring Cloud ecosystem</li>
+                                    <li>Real-time data processing with Apache Kafka</li>
+                                    <li>Containerized deployment with Docker Swarm</li>
+                                    <li>CI/CD pipeline implementation with GitHub Actions</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-responsibilities">
+                                <h4>Leadership Responsibilities</h4>
+                                <ul class="responsibility-list">
+                                    <li>Led client meetings and requirement gathering sessions</li>
+                                    <li>Managed project tasks and sprint planning</li>
+                                    <li>Trained and mentored 3 trainee developers</li>
+                                    <li>Developed AI-powered automation tools for repetitive tasks</li>
+                                </ul>
+                            </div>
+
                             <div class="project-tech">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Spring Boot</span>
-                                <span class="tech-tag">Microservices</span>
-                                <span class="tech-tag">Docker</span>
+                                <div class="tech-categories">
+                                    <div class="tech-group">
+                                        <span class="tech-group-label">Frontend</span>
+                                        <span class="tech-tag">React (JavaScript)</span>
+                                        <span class="tech-tag">Material-UI</span>
+                                        <span class="tech-tag">Redux Toolkit</span>
+                                        <span class="tech-tag">RTK Query</span>
+                                        <span class="tech-tag">Tailwind CSS</span>
+                                    </div>
+                                    <div class="tech-group">
+                                        <span class="tech-group-label">Backend</span>
+                                        <span class="tech-tag">Spring Boot</span>
+                                        <span class="tech-tag">Spring Cloud Gateway</span>
+                                        <span class="tech-tag">Spring Security</span>
+                                        <span class="tech-tag">Webflux</span>
+                                        <span class="tech-tag">Jasper Reports</span>
+                                        <span class="tech-tag">JWT</span>
+                                    </div>
+                                    <div class="tech-group">
+                                        <span class="tech-group-label">Architecture</span>
+                                        <span class="tech-tag">Microservices</span>
+                                        <span class="tech-tag">Apache Kafka</span>
+                                        <span class="tech-tag">Docker Swarm</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="project-outcomes">
+                                <div class="outcome-item">
+                                    <span class="outcome-icon">✅</span>
+                                    <span class="outcome-text">Delivered on time with zero critical bugs</span>
+                                </div>
+                                <div class="outcome-item">
+                                    <span class="outcome-icon">📈</span>
+                                    <span class="outcome-text">40% improvement in workflow efficiency</span>
+                                </div>
+                                <div class="outcome-item">
+                                    <span class="outcome-icon">🏆</span>
+                                    <span class="outcome-text">Client appreciation for exceptional delivery</span>
+                                </div>
+                            </div> -->
+
+                            <div class="project-footer">
+                                <div class="project-type">
+                                    <span class="type-icon">🏛️</span>
+                                    <span class="type-text">Web Application</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="project-card">
-                            <h3>Zentra POS</h3>
-                            <p class="project-role">Team Lead</p>
-                            <p class="project-description">Point of sale web application with TypeScript and modern UI</p>
+
+                        <!-- Zentra POS -->
+                        <div class="project-card interactive-card" data-animate="fadeUp"
+                            data-tech="react spring typescript">
+                            <div class="project-header">
+                                <div class="project-title-row">
+                                    <h3>Zentra POS</h3>
+                                    <div class="project-status">
+                                        <span class="status-dot completed"></span>
+                                        <span class="status-text">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="project-role">Team Lead</span>
+                                    <span class="project-duration">3 months</span>
+                                </div>
+                            </div>
+
+                            <p class="project-description">
+                                Modern Point of Sale system with advanced inventory management, sales analytics, and
+                                multi-location support for retail businesses. Built with TypeScript for enhanced code
+                                quality
+                                and maintainability.
+                            </p>
+
+                            <div class="project-highlights">
+                                <h4>Key Features</h4>
+                                <ul class="feature-list">
+                                    <li>Main-transactional functions implemented</li>
+                                    <li>Mobile-responsive design for tablets and phones</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-responsibilities">
+                                <h4>Leadership Responsibilities</h4>
+                                <ul class="responsibility-list">
+                                    <li>Managed project tasks and sprint planning</li>
+                                    <li>Trained and mentored 2 junior developers</li>
+                                </ul>
+                            </div>
+
                             <div class="project-tech">
-                                <span class="tech-tag">React TS</span>
-                                <span class="tech-tag">Spring Boot</span>
-                                <span class="tech-tag">Tailwind CSS</span>
-                                <span class="tech-tag">Material-UI</span>
+                                <div class="tech-categories">
+                                    <div class="tech-group">
+                                        <span class="tech-group-label">Frontend</span>
+                                        <span class="tech-tag">React (TypeScript)</span>
+                                        <span class="tech-tag">Zustand</span>
+                                        <span class="tech-tag">Tailwind CSS</span>
+                                        <span class="tech-tag">Material-UI</span>
+                                    </div>
+                                    <div class="tech-group">
+                                        <span class="tech-group-label">Backend : Zentra ERP backend</span>
+                                        <!-- <span class="tech-tag">Zentra ERP backend</span> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-outcomes">
+                                <div class="outcome-item">
+                                    <span class="outcome-icon">📦</span>
+                                    <span class="outcome-text">Established reusable component library</span>
+                                </div>
+                            </div>
+
+                            <div class="project-footer">
+                                <div class="project-type">
+                                    <span class="type-icon">💼</span>
+                                    <span class="type-text">Commercial • Monolithic</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="project-card">
-                            <h3>Meridiem ERP</h3>
-                            <p class="project-role">Developer</p>
-                            <p class="project-description">Enterprise resource planning system with supply chain management</p>
+
+                        <!-- Zentra ERP -->
+                        <div class="project-card interactive-card" data-animate="fadeUp" data-tech="flutter spring">
+                            <div class="project-header">
+                                <div class="project-title-row">
+                                    <h3>Zentra ERP</h3>
+                                    <div class="project-status">
+                                        <span class="status-dot completed"></span>
+                                        <span class="status-text">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="project-role">Full Stack Developer</span>
+                                    <span class="project-duration">1 Year</span>
+                                </div>
+                            </div>
+
+                            <p class="project-description">
+                                Comprehensive Enterprise Resource Planning system covering complete business workflow
+                                from supply chain to customer relationship management with real-time capabilities.
+                            </p>
+
+                            <div class="project-highlights">
+                                <h4>Business Workflows</h4>
+                                <ul class="feature-list">
+                                    <li>Supply Chain: Purchase Order → GRN → Costing → Invoice → Payment</li>
+                                    <li>Sales Order processing and management pipeline</li>
+                                    <li>Stock take and adjustment systems</li>
+                                    <li>Customer relationship management (CRM) integration</li>
+                                    <li>Comprehensive payment management system</li>
+                                </ul>
+                            </div>
+
                             <div class="project-tech">
-                                <span class="tech-tag">Flutter</span>
-                                <span class="tech-tag">Spring Boot</span>
-                                <span class="tech-tag">WebSocket</span>
-                                <span class="tech-tag">MySQL</span>
+                                <div class="tech-categories">
+                                    <div class="tech-group">
+                                        <span class="tech-group-label">Frontend</span>
+                                        <span class="tech-tag">Flutter & Dart</span>
+                                    </div>
+                                    <div class="tech-group">
+                                        <span class="tech-group-label">Backend</span>
+                                        <span class="tech-tag">Spring Boot</span>
+                                        <span class="tech-tag">WebSocket</span>
+                                        <span class="tech-tag">MySQL</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-outcomes">
+                                <div class="outcome-item">
+                                    <span class="outcome-icon">🏭</span>
+                                    <span class="outcome-text">Streamlined operations for multiple companies</span>
+                                </div>
+                                <!-- <div class="outcome-item">
+                                    <span class="outcome-icon">⏱️</span>
+                                    <span class="outcome-text">60% reduction in manual processing time</span>
+                                </div> -->
+                            </div>
+
+                            <div class="project-footer">
+                                <div class="project-type">
+                                    <span class="type-icon">🏭</span>
+                                    <span class="type-text">Enterprise • Layered Architecture</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="project-card">
-                            <h3>Tea Estate Management System</h3>
-                            <p class="project-role">Developer</p>
-                            <p class="project-description">Desktop application for managing tea estate operations</p>
+
+                        <!-- Additional Industry Projects -->
+                        <div class="project-card interactive-card" data-animate="fadeUp" data-tech="flutter spring">
+                            <div class="project-header">
+                                <div class="project-title-row">
+                                    <h3>Smart ERP</h3>
+                                    <div class="project-status">
+                                        <span class="status-dot completed"></span>
+                                        <span class="status-text">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="project-role">Full Stack Developer</span>
+                                    <span class="project-duration">3 months</span>
+                                </div>
+                            </div>
+
+                            <p class="project-description">
+                                Intelligent ERP solution with automated workflows and smart analytics for small to
+                                medium enterprises, process automation.
+                            </p>
+
                             <div class="project-tech">
-                                <span class="tech-tag">Java</span>
-                                <span class="tech-tag">Spring Boot</span>
-                                <span class="tech-tag">Flutter</span>
-                                <span class="tech-tag">MySQL</span>
+                                <div class="tech-categories">
+                                    <div class="tech-group">
+                                        <span class="tech-tag">Flutter & Dart</span>
+                                        <span class="tech-tag">Spring Boot</span>
+                                        <span class="tech-tag">MySQL</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-footer">
+                                <div class="project-type">
+                                    <span class="type-icon">💼</span>
+                                    <span class="type-text">SME • Monolithic</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card interactive-card" data-animate="fadeUp" data-tech="spring flutter">
+                            <div class="project-header">
+                                <div class="project-title-row">
+                                    <h3>Tea Estate Management System</h3>
+                                    <div class="project-status">
+                                        <span class="status-dot completed"></span>
+                                        <span class="status-text">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="project-role">Full Stack Developer</span>
+                                    <span class="project-duration">4 months</span>
+                                </div>
+                            </div>
+
+                            <p class="project-description">
+                                Specialized management system for tea estates covering plantation management, harvest
+                                tracking, quality control processes, and comprehensive reporting for agricultural
+                                operations.
+                            </p>
+
+                            <div class="project-highlights">
+                                <h4>Agricultural Features</h4>
+                                <ul class="feature-list">
+                                    <li>Plantation lifecycle management</li>
+                                    <li>Harvest tracking and quality assessment</li>
+                                    <li>Worker productivity monitoring</li>
+                                    <li>Weather data integration</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-tech">
+                                <div class="tech-categories">
+                                    <div class="tech-group">
+                                        <span class="tech-tag">Maven</span>
+                                        <span class="tech-tag">Java</span>
+                                        <span class="tech-tag">Jasper Reports</span>
+                                        <span class="tech-tag">Spring Boot</span>
+                                        <span class="tech-tag">Flutter & Dart</span>
+                                        <span class="tech-tag">MySQL</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-footer">
+                                <div class="project-type">
+                                    <span class="type-icon">🌱</span>
+                                    <span class="type-text">Agriculture • Desktop Application</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="personal" class="tab-panel">
+
+                <div id="personal" class="tab-panel" role="tabpanel">
                     <div class="project-grid">
-                        <div class="project-card">
-                            <h3>Content-aware PDF extraction pipeline</h3>
-                            <p class="project-role">Research Project</p>
-                            <p class="project-description">ML-based multimodel architecture for intelligent PDF extraction</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Machine Learning</span>
-                                <span class="tech-tag">Hugging Face</span>
-                                <span class="tech-tag">DocLayout-YOLO</span>
+                        <!-- ML Research Project -->
+                        <div class="project-card featured interactive-card" data-animate="fadeUp" data-tech="python">
+                            <div class="project-badge">Research</div>
+                            <div class="project-header">
+                                <div class="project-title-row">
+                                    <h3>Content-aware PDF extraction pipeline</h3>
+                                    <div class="project-status">
+                                        <span class="status-dot ongoing"></span>
+                                        <span class="status-text">Ongoing Research</span>
+                                    </div>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="project-role">ML Research</span>
+                                    <!-- <span class="project-duration">6+ months</span> -->
+                                </div>
                             </div>
-                            <a href="https://github.com/vidura626/Content-aware-pdf-extraction-pipeline" class="project-link" target="_blank">View on GitHub</a>
+
+                            <p class="project-description">
+                                Advanced machine learning pipeline for intelligent PDF content extraction using
+                                multimodel architecture with state-of-the-art document layout analysis and natural
+                                language processing techniques.
+                            </p>
+
+                            <div class="project-highlights">
+                                <h4>Research Innovations</h4>
+                                <ul class="feature-list">
+                                    <li>Multimodel architecture for comprehensive PDF analysis</li>
+                                    <li>Advanced document layout detection with DocLayout-YOLO</li>
+                                    <li>Text extraction and classification with LayoutLMv3</li>
+                                    <li>Content-aware parsing for different document types</li>
+                                    <li>Integration with Hugging Face transformers ecosystem</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-research">
+                                <h4>Research Aspects</h4>
+                                <div class="research-areas">
+                                    <div class="research-item">
+                                        <span class="research-icon">📊</span>
+                                        <span class="research-text">Document structure understanding</span>
+                                    </div>
+                                    <div class="research-item">
+                                        <span class="research-icon">🧠</span>
+                                        <span class="research-text">Multimodel deep learning approaches</span>
+                                    </div>
+                                    <div class="research-item">
+                                        <span class="research-icon">👁️</span>
+                                        <span class="research-text">Computer vision for document analysis</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-tech">
+                                <div class="tech-categories">
+                                    <div class="tech-group">
+                                        <span class="tech-group-label">ML/AI</span>
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Pandas</span>
+                                        <span class="tech-tag">Scikit-learn</span>
+                                        <span class="tech-tag">Hugging Face</span>
+                                    </div>
+                                    <div class="tech-group">
+                                        <span class="tech-group-label">Models</span>
+                                        <span class="tech-tag">DocLayout-YOLO</span>
+                                        <span class="tech-tag">LayoutLMv3</span>
+                                    </div>
+                                    <div class="tech-group">
+                                        <span class="tech-group-label">Tools</span>
+                                        <span class="tech-tag">PyPDF</span>
+                                        <span class="tech-tag">Google Colab</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-footer">
+                                <div class="project-links">
+                                    <a href="https://github.com/vidura626/Content-aware-pdf-extraction-pipeline"
+                                        class="project-link" target="_blank" data-cursor="pointer">
+                                        <span class="link-icon">📂</span>
+                                        <span class="link-text">View Research →</span>
+                                    </a>
+                                </div>
+                                <div class="project-type">
+                                    <span class="type-icon">🔬</span>
+                                    <span class="type-text">Machine Learning Research</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="project-card">
-                            <h3>Travel Management System</h3>
-                            <p class="project-role">Full Stack Developer</p>
-                            <p class="project-description">Microservices-based travel booking and management platform</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Spring Boot</span>
-                                <span class="tech-tag">Microservices</span>
-                                <span class="tech-tag">JWT</span>
-                                <span class="tech-tag">TypeScript</span>
+
+                        <!-- Travel Management System -->
+                        <div class="project-card interactive-card" data-animate="fadeUp"
+                            data-tech="spring microservices">
+                            <div class="project-header">
+                                <div class="project-title-row">
+                                    <h3>Travel Management System</h3>
+                                    <div class="project-status">
+                                        <span class="status-dot completed"></span>
+                                        <span class="status-text">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="project-role">Full Stack Developer</span>
+                                    <span class="project-duration">3 months</span>
+                                </div>
                             </div>
-                            <div class="project-links">
-                                <a href="https://github.com/vidura626/Travel-management-system-API" class="project-link" target="_blank">Backend</a>
-                                <a href="https://github.com/vidura626/Travel_Management_System_UI_Js" class="project-link" target="_blank">Frontend</a>
+
+                            <p class="project-description">
+                                Comprehensive travel management platform with microservices architecture, featuring user
+                                authentication, booking management, real-time updates, and complete travel workflow
+                                automation.
+                            </p>
+
+                            <div class="project-highlights">
+                                <h4>Architecture & Features</h4>
+                                <ul class="feature-list">
+                                    <li>Microservices architecture with service discovery</li>
+                                    <li>JWT-based role authentication system</li>
+                                    <li>Real-time booking and availability updates</li>
+                                    <li>Responsive modern UI with TypeScript</li>
+                                    <li>API Gateway for service orchestration</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-tech">
+                                <div class="tech-categories">
+                                    <div class="tech-group">
+                                        <span class="tech-group-label">Backend</span>
+                                        <span class="tech-tag">Spring Boot</span>
+                                        <span class="tech-tag">Spring Cloud Gateway</span>
+                                        <span class="tech-tag">Spring Security</span>
+                                        <span class="tech-tag">JWT</span>
+                                    </div>
+                                    <div class="tech-group">
+                                        <span class="tech-group-label">Frontend</span>
+                                        <span class="tech-tag">TypeScript</span>
+                                        <span class="tech-tag">HTML</span>
+                                        <span class="tech-tag">Tailwind CSS</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-footer">
+                                <div class="project-links">
+                                    <a href="https://github.com/vidura626/Travel-management-system-API"
+                                        class="project-link" target="_blank" data-cursor="pointer">
+                                        <span class="link-icon">⚙️</span>
+                                        <span class="link-text">Backend →</span>
+                                    </a>
+                                    <a href="https://github.com/vidura626/Travel_Management_System_UI_Js"
+                                        class="project-link" target="_blank" data-cursor="pointer">
+                                        <span class="link-icon">🎨</span>
+                                        <span class="link-text">Frontend →</span>
+                                    </a>
+                                </div>
+                                <div class="project-type">
+                                    <span class="type-icon">✈️</span>
+                                    <span class="type-text">Microservices • Travel</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="project-card">
-                            <h3>Chat Application</h3>
-                            <p class="project-role">Developer</p>
-                            <p class="project-description">Real-time chat application using socket programming</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">JavaFX</span>
-                                <span class="tech-tag">Socket IO</span>
-                                <span class="tech-tag">MySQL</span>
-                                <span class="tech-tag">Java 8</span>
+
+                        <!-- Chat Application -->
+                        <div class="project-card interactive-card" data-animate="fadeUp">
+                            <div class="project-header">
+                                <div class="project-title-row">
+                                    <h3>Chat Application</h3>
+                                    <div class="project-status">
+                                        <span class="status-dot completed"></span>
+                                        <span class="status-text">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="project-role">Desktop Developer</span>
+                                    <span class="project-duration">1 months</span>
+                                </div>
                             </div>
-                            <a href="https://github.com/vidura626/Chat-app-javaFX-using-socket-programming" class="project-link" target="_blank">View on GitHub</a>
+
+                            <p class="project-description">
+                                Real-time chat application built with JavaFX featuring socket programming for instant
+                                messaging, file sharing capabilities, and modern desktop interface design.
+                            </p>
+
+                            <div class="project-highlights">
+                                <h4>Real-time Features</h4>
+                                <ul class="feature-list">
+                                    <li>Real-time messaging with socket programming</li>
+                                    <li>File sharing and transfer capabilities</li>
+                                    <li>User authentication and session management</li>
+                                    <li>Modern JavaFX interface design</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-tech">
+                                <div class="tech-categories">
+                                    <div class="tech-group">
+                                        <span class="tech-tag">JavaFX</span>
+                                        <span class="tech-tag">Socket IO</span>
+                                        <span class="tech-tag">MySQL</span>
+                                        <span class="tech-tag">Java 8</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-footer">
+                                <div class="project-links">
+                                    <a href="https://github.com/vidura626/Chat-app-javaFX-using-socket-programming"
+                                        class="project-link" target="_blank" data-cursor="pointer">
+                                        <span class="link-icon">💬</span>
+                                        <span class="link-text">View Code →</span>
+                                    </a>
+                                </div>
+                                <div class="project-type">
+                                    <span class="type-icon">💻</span>
+                                    <span class="type-text">Desktop • Real-time</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="project-card">
-                            <h3>Bank Management System</h3>
-                            <p class="project-role">Developer</p>
-                            <p class="project-description">Banking application with MVC and Layered architectures</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Java 8</span>
-                                <span class="tech-tag">JavaFX</span>
-                                <span class="tech-tag">JavaMail</span>
-                                <span class="tech-tag">MySQL</span>
+
+                        <!-- Reading Management App -->
+                        <div class="project-card interactive-card" data-animate="fadeUp">
+                            <div class="project-header">
+                                <div class="project-title-row">
+                                    <h3>Reading Management Application</h3>
+                                    <div class="project-status">
+                                        <span class="status-dot completed"></span>
+                                        <span class="status-text">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="project-role">Android Developer</span>
+                                    <span class="project-duration">2 Weeks</span>
+                                </div>
                             </div>
-                            <div class="project-links">
-                                <a href="https://github.com/vidura626/Bank_Management_System_MVC" class="project-link" target="_blank">MVC</a>
-                                <a href="https://github.com/vidura626/Bank_Management_System_Layered" class="project-link" target="_blank">Layered</a>
+
+                            <p class="project-description">
+                                Android application for book and reading progress management with features for tracking
+                                reading goals, statistics, and personal library organization.
+                            </p>
+
+                            <div class="project-highlights">
+                                <h4>Mobile Features</h4>
+                                <ul class="feature-list">
+                                    <li>Personal reading library management</li>
+                                    <li>Reading progress tracking and goals</li>
+                                    <li>Statistics and reading analytics</li>
+                                    <li>Book recommendations and reviews</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-tech">
+                                <div class="tech-categories">
+                                    <div class="tech-group">
+                                        <span class="tech-tag">XML Android</span>
+                                        <span class="tech-tag">Java 8</span>
+                                        <span class="tech-tag">Android Studio</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-footer">
+                                <div class="project-links">
+                                    <a href="https://github.com/vidura626/Reading-management-android-app"
+                                        class="project-link" target="_blank" data-cursor="pointer">
+                                        <span class="link-icon">📱</span>
+                                        <span class="link-text">View App →</span>
+                                    </a>
+                                </div>
+                                <div class="project-type">
+                                    <span class="type-icon">📚</span>
+                                    <span class="type-text">Android • Personal</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bank Management System -->
+                        <div class="project-card interactive-card" data-animate="fadeUp">
+                            <div class="project-header">
+                                <div class="project-title-row">
+                                    <h3>Bank Management System</h3>
+                                    <div class="project-status">
+                                        <span class="status-dot completed"></span>
+                                        <span class="status-text">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="project-role">Full Stack Developer</span>
+                                    <span class="project-duration">2 months</span>
+                                </div>
+                            </div>
+
+                            <p class="project-description">
+                                Comprehensive banking system demonstrating both MVC and Layered architectural patterns
+                                with advanced features like email notifications and secure transaction processing.
+                            </p>
+
+                            <div class="project-highlights">
+                                <h4>Banking Features</h4>
+                                <ul class="feature-list">
+                                    <li>Account management and transaction processing</li>
+                                    <li>Email notification system with JavaMail</li>
+                                    <li>Dual architecture implementation for comparison</li>
+                                    <li>Secure transaction processing and audit trails</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-tech">
+                                <div class="tech-categories">
+                                    <div class="tech-group">
+                                        <span class="tech-tag">Java 8</span>
+                                        <span class="tech-tag">JavaFX</span>
+                                        <span class="tech-tag">JavaMail</span>
+                                        <span class="tech-tag">MySQL</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-footer">
+                                <div class="project-links">
+                                    <a href="https://github.com/vidura626/Bank_Management_System_MVC"
+                                        class="project-link" target="_blank" data-cursor="pointer">
+                                        <span class="link-icon">🏗️</span>
+                                        <span class="link-text">MVC →</span>
+                                    </a>
+                                    <a href="https://github.com/vidura626/Bank_Management_System_Layered"
+                                        class="project-link" target="_blank" data-cursor="pointer">
+                                        <span class="link-icon">📚</span>
+                                        <span class="link-text">Layered →</span>
+                                    </a>
+                                </div>
+                                <div class="project-type">
+                                    <span class="type-icon">🏦</span>
+                                    <span class="type-text">Banking • Architecture Demo</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -315,199 +1251,875 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
+    <!-- Skills Section Component (Completely Redesigned) -->
+    <section id="skills" class="skills-component">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Skills & Technologies</h2>
-                <p class="section-subtitle">My technical expertise and proficiencies</p>
+                <p class="section-subtitle">My comprehensive technical expertise across the full development stack</p>
             </div>
-            <div class="skills-content">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-list">
-                        <div class="skill-item" data-level="90">
-                            <span class="skill-name">Java</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
+
+            <div class="skills-filter">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all" data-cursor="pointer">All Skills</button>
+                    <button class="filter-tab" data-filter="languages" data-cursor="pointer">Languages</button>
+                    <button class="filter-tab" data-filter="frontend" data-cursor="pointer">Frontend</button>
+                    <button class="filter-tab" data-filter="backend" data-cursor="pointer">Backend</button>
+                    <button class="filter-tab" data-filter="tools" data-cursor="pointer">Tools & DevOps</button>
+                </div>
+
+                <div class="skills-search">
+                    <input type="text" placeholder="Search skills..." class="search-input" id="skillSearch">
+                    <span class="search-icon">🔍</span>
+                </div>
+            </div>
+
+            <div class="skills-cloud" id="skillsCloud">
+                <!-- Programming Languages -->
+                <div class="skill-item" data-category="languages" data-level="90" data-years="3">
+                    <div class="skill-card">
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                height="100" viewBox="0 0 50 50">
+                                <path
+                                    d="M 28.1875 0 C 30.9375 6.363281 18.328125 10.292969 17.15625 15.59375 C 16.082031 20.464844 24.648438 26.125 24.65625 26.125 C 23.355469 24.109375 22.398438 22.449219 21.09375 19.3125 C 18.886719 14.007813 34.535156 9.207031 28.1875 0 Z M 36.5625 8.8125 C 36.5625 8.8125 25.5 9.523438 24.9375 16.59375 C 24.6875 19.742188 27.847656 21.398438 27.9375 23.6875 C 28.011719 25.558594 26.0625 27.125 26.0625 27.125 C 26.0625 27.125 29.609375 26.449219 30.71875 23.59375 C 31.949219 20.425781 28.320313 18.285156 28.6875 15.75 C 29.039063 13.324219 36.5625 8.8125 36.5625 8.8125 Z M 19.1875 25.15625 C 19.1875 25.15625 9.0625 25.011719 9.0625 27.875 C 9.0625 30.867188 22.316406 31.089844 31.78125 29.25 C 31.78125 29.25 34.296875 27.519531 34.96875 26.875 C 28.765625 28.140625 14.625 28.28125 14.625 27.1875 C 14.625 26.179688 19.1875 25.15625 19.1875 25.15625 Z M 38.65625 25.15625 C 37.664063 25.234375 36.59375 25.617188 35.625 26.3125 C 37.90625 25.820313 39.84375 27.234375 39.84375 28.84375 C 39.84375 32.46875 34.59375 35.875 34.59375 35.875 C 34.59375 35.875 42.71875 34.953125 42.71875 29 C 42.71875 26.296875 40.839844 24.984375 38.65625 25.15625 Z M 16.75 30.71875 C 15.195313 30.71875 12.875 31.9375 12.875 33.09375 C 12.875 35.417969 24.5625 37.207031 33.21875 33.8125 L 30.21875 31.96875 C 24.351563 33.847656 13.546875 33.234375 16.75 30.71875 Z M 18.1875 35.9375 C 16.058594 35.9375 14.65625 37.222656 14.65625 38.1875 C 14.65625 41.171875 27.371094 41.472656 32.40625 38.4375 L 29.21875 36.40625 C 25.457031 37.996094 16.015625 38.238281 18.1875 35.9375 Z M 11.09375 38.625 C 7.625 38.554688 5.375 40.113281 5.375 41.40625 C 5.375 48.28125 40.875 47.964844 40.875 40.9375 C 40.875 39.769531 39.527344 39.203125 39.03125 38.9375 C 41.933594 45.65625 9.96875 45.121094 9.96875 41.15625 C 9.96875 40.253906 12.320313 39.390625 14.5 39.8125 L 12.65625 38.75 C 12.113281 38.667969 11.589844 38.636719 11.09375 38.625 Z M 44.625 43.25 C 39.226563 48.367188 25.546875 50.222656 11.78125 47.0625 C 25.542969 52.695313 44.558594 49.535156 44.625 43.25 Z">
+                                </path>
+                            </svg></div>
+                        <div class="skill-info">
+                            <h4>Java</h4>
                         </div>
-                        <div class="skill-item" data-level="85">
-                            <span class="skill-name">JavaScript/TypeScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="80">
-                            <span class="skill-name">Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="75">
-                            <span class="skill-name">Dart</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
+                        <div class="skill-glow"></div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Frontend Technologies</h3>
-                    <div class="skill-list">
-                        <div class="skill-item" data-level="90">
-                            <span class="skill-name">React</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
+
+                <div class="skill-item" data-category="languages" data-level="85" data-years="2">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0 0 30 30">
+                                <path
+                                    d="M 13 3 C 10.791 3 9 4.791 9 7 L 9 8 L 14 8 C 14.552 8 15 8.448 15 9 C 15 9.552 14.552 10 14 10 L 9 10 L 8 10 L 7 10 C 4.791 10 3 11.791 3 14 L 3 18 C 3 20.209 4.791 22 7 22 L 8 22 L 8 17 C 8 15.346 9.346 14 11 14 L 19 14 C 19.552 14 20 13.552 20 13 L 20 7 C 20 4.791 18.209 3 16 3 L 13 3 z M 12 5 C 12.552 5 13 5.448 13 6 C 13 6.552 12.552 7 12 7 C 11.448 7 11 6.552 11 6 C 11 5.448 11.448 5 12 5 z M 22 8 L 22 13 C 22 14.654 20.654 16 19 16 L 11 16 C 10.448 16 10 16.448 10 17 L 10 23 C 10 25.209 11.791 27 14 27 L 17 27 C 19.209 27 21 25.209 21 23 L 21 22 L 16 22 C 15.448 22 15 21.552 15 21 C 15 20.448 15.448 20 16 20 L 21 20 L 22 20 L 23 20 C 25.209 20 27 18.209 27 16 L 27 12 C 27 9.791 25.209 8 23 8 L 22 8 z M 18 23 C 18.552 23 19 23.448 19 24 C 19 24.552 18.552 25 18 25 C 17.448 25 17 24.552 17 24 C 17 23.448 17.448 23 18 23 z">
+                                </path>
+                            </svg>
                         </div>
-                        <div class="skill-item" data-level="85">
-                            <span class="skill-name">Flutter</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
+                        <div class="skill-info">
+                            <h4>Python</h4>
                         </div>
-                        <div class="skill-item" data-level="80">
-                            <span class="skill-name">HTML/CSS</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="75">
-                            <span class="skill-name">Tailwind CSS</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
+
+                        <div class="skill-glow"></div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Backend & Database</h3>
-                    <div class="skill-list">
-                        <div class="skill-item" data-level="95">
-                            <span class="skill-name">Spring Boot</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
+
+                <div class="skill-item" data-category="languages" data-level="85" data-years="2">
+                    <div class="skill-card">
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                height="100" viewBox="0 0 48 48">
+                                <path fill="#f7df1e" d="M6,42V6h36v36H6z"></path>
+                                <path fill="#000001"
+                                    d="M29.538,32.947c0.692,1.124,1.444,2.201,3.037,2.201c1.338,0,2.04-0.665,2.04-1.585 c0-1.101-0.726-1.492-2.198-2.133l-0.807-0.344c-2.329-0.988-3.878-2.226-3.878-4.841c0-2.41,1.845-4.244,4.728-4.244 c2.053,0,3.528,0.711,4.592,2.573l-2.514,1.607c-0.553-0.988-1.151-1.377-2.078-1.377c-0.946,0-1.545,0.597-1.545,1.377 c0,0.964,0.6,1.354,1.985,1.951l0.807,0.344C36.452,29.645,38,30.839,38,33.523C38,36.415,35.716,38,32.65,38 c-2.999,0-4.702-1.505-5.65-3.368L29.538,32.947z M17.952,33.029c0.506,0.906,1.275,1.603,2.381,1.603 c1.058,0,1.667-0.418,1.667-2.043V22h3.333v11.101c0,3.367-1.953,4.899-4.805,4.899c-2.577,0-4.437-1.746-5.195-3.368 L17.952,33.029z">
+                                </path>
+                            </svg></div>
+                        <div class="skill-info">
+                            <h4>JavaScript</h4>
                         </div>
-                        <div class="skill-item" data-level="85">
-                            <span class="skill-name">MySQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
+                        <div class="skill-rating">
+
                         </div>
-                        <div class="skill-item" data-level="80">
-                            <span class="skill-name">Node.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="75">
-                            <span class="skill-name">MongoDB</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
+                        <div class="skill-glow"></div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Tools & DevOps</h3>
-                    <div class="skill-list">
-                        <div class="skill-item" data-level="90">
-                            <span class="skill-name">Git/GitHub</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
+
+                <div class="skill-item" data-category="languages" data-level="75" data-years="1.5">
+                    <div class="skill-card">
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                height="100" viewBox="0 0 50 50">
+                                <path
+                                    d="M45,4H5C4.447,4,4,4.448,4,5v40c0,0.552,0.447,1,1,1h40c0.553,0,1-0.448,1-1V5C46,4.448,45.553,4,45,4z M29,26.445h-5V42h-4	V26.445h-5V23h14V26.445z M30.121,41.112v-4.158c0,0,2.271,1.712,4.996,1.712c2.725,0,2.62-1.782,2.62-2.026	c0-2.586-7.721-2.586-7.721-8.315c0-7.791,11.25-4.717,11.25-4.717l-0.14,3.704c0,0-1.887-1.258-4.018-1.258s-2.9,1.013-2.9,2.096	c0,2.795,7.791,2.516,7.791,8.141C42,44.955,30.121,41.112,30.121,41.112z">
+                                </path>
+                            </svg></div>
+                        <div class="skill-info">
+                            <h4>TypeScript</h4>
                         </div>
-                        <div class="skill-item" data-level="80">
-                            <span class="skill-name">Docker</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="75">
-                            <span class="skill-name">AWS</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="85">
-                            <span class="skill-name">Apache Kafka</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
+                        <div class="skill-glow"></div>
                     </div>
+                </div>
+
+
+                <div class="skill-item" data-category="languages" data-level="70" data-years="1">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0 0 48 48">
+                                <path fill="#388e3c"
+                                    d="M17.204 19.122l-4.907 2.715C12.113 21.938 12 22.126 12 22.329v5.433c0 .203.113.39.297.492l4.908 2.717c.183.101.41.101.593 0l4.907-2.717C22.887 28.152 23 27.965 23 27.762v-5.433c0-.203-.113-.39-.297-.492l-4.906-2.715c-.092-.051-.195-.076-.297-.076-.103 0-.205.025-.297.076M42.451 24.013l-.818.452c-.031.017-.049.048-.049.082v.906c0 .034.019.065.049.082l.818.453c.031.017.068.017.099 0l.818-.453c.03-.017.049-.048.049-.082v-.906c0-.034-.019-.065-.05-.082l-.818-.452C42.534 24.004 42.517 24 42.5 24S42.466 24.004 42.451 24.013">
+                                </path>
+                                <path fill="#37474f"
+                                    d="M35.751,13.364l-2.389-1.333c-0.075-0.042-0.167-0.041-0.241,0.003 c-0.074,0.044-0.12,0.123-0.12,0.209L33,20.295l-2.203-1.219C30.705,19.025,30.602,19,30.5,19c-0.102,0-0.205,0.025-0.297,0.076 h0.001l-4.907,2.715C25.113,21.892,25,22.08,25,22.282v5.433c0,0.203,0.113,0.39,0.297,0.492l4.908,2.717 c0.183,0.101,0.41,0.101,0.593,0l4.907-2.717C35.887,28.106,36,27.918,36,27.715V13.788C36,13.612,35.904,13.45,35.751,13.364z M32.866,26.458l-2.23,1.235c-0.083,0.046-0.186,0.046-0.269,0l-2.231-1.235C28.051,26.412,28,26.326,28,26.234v-2.47 c0-0.092,0.051-0.177,0.135-0.224l2.231-1.234h-0.001c0.042-0.023,0.088-0.034,0.135-0.034c0.047,0,0.093,0.012,0.135,0.034 l2.23,1.234C32.949,23.587,33,23.673,33,23.765v2.47C33,26.326,32.949,26.412,32.866,26.458z">
+                                </path>
+                                <path fill="#2e7d32"
+                                    d="M17.204,19.122L12,27.762c0,0.203,0.113,0.39,0.297,0.492l4.908,2.717 c0.183,0.101,0.41,0.101,0.593,0L23,22.329c0-0.203-0.113-0.39-0.297-0.492l-4.906-2.715c-0.092-0.051-0.195-0.076-0.297-0.076 c-0.103,0-0.205,0.025-0.297,0.076">
+                                </path>
+                                <path fill="#4caf50"
+                                    d="M17.204,19.122l-4.907,2.715C12.113,21.938,12,22.126,12,22.329l5.204,8.642 c0.183,0.101,0.41,0.101,0.593,0l4.907-2.717C22.887,28.152,23,27.965,23,27.762l-5.203-8.64c-0.092-0.051-0.195-0.076-0.297-0.076 c-0.103,0-0.205,0.025-0.297,0.076">
+                                </path>
+                                <path fill="#37474f"
+                                    d="M47.703 21.791l-4.906-2.715C42.705 19.025 42.602 19 42.5 19c-.102 0-.205.025-.297.076h.001l-4.907 2.715C37.114 21.892 37 22.084 37 22.294v5.411c0 .209.114.402.297.503l4.908 2.717c.184.102.409.102.593 0l2.263-1.253c.207-.115.206-.412-.002-.526l-4.924-2.687C40.052 26.412 40 26.325 40 26.231v-2.466c0-.092.05-.177.13-.221l2.235-1.236h-.001c.042-.023.088-.034.135-.034.047 0 .093.012.135.034l2.235 1.237c.08.044.13.129.13.221v2.012c0 .086.046.166.121.209.075.042.167.042.242-.001l2.398-1.393c.148-.086.24-.245.24-.417v-1.88C48 22.085 47.886 21.892 47.703 21.791zM10.703 21.791l-4.906-2.715C5.705 19.025 5.602 19 5.5 19c-.102 0-.205.025-.297.076h.001l-4.907 2.715C.114 21.892 0 22.084 0 22.294v7.465c0 .086.046.166.121.209.075.042.167.042.242-.001l2.398-1.393C2.909 28.488 3 28.329 3 28.157v-4.393c0-.092.05-.177.13-.221l2.235-1.236H5.365c.042-.023.088-.034.135-.034.047 0 .093.012.135.034l2.235 1.237C7.95 23.588 8 23.673 8 23.765v4.393c0 .172.091.331.24.417l2.398 1.393c.075.043.167.043.242.001C10.954 29.925 11 29.845 11 29.759v-7.464C11 22.085 10.886 21.892 10.703 21.791z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Node.js</h4>
+                        </div>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+
+
+
+                <!-- Frontend Technologies -->
+                <div class="skill-item" data-category="frontend" data-level="90" data-years="2">
+                    <div class="skill-card">
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                height="100" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="7" fill="#39c1d7"></circle>
+                                <path fill="#1f212b"
+                                    d="M50,58c-4.411,0-8-3.589-8-8s3.589-8,8-8s8,3.589,8,8S54.411,58,50,58z M50,44c-3.309,0-6,2.691-6,6	s2.691,6,6,6s6-2.691,6-6S53.309,44,50,44z">
+                                </path>
+                                <path fill="#39c1d7"
+                                    d="M88.5,50c0-5.376-6.474-10.029-16.518-12.798c2.582-10.096,1.787-18.035-2.827-20.729	c-1.82-1.063-4.028-1.257-6.562-0.579C58.775,16.916,54.4,19.904,50,24.293c-4.4-4.389-8.775-7.376-12.593-8.399	c-2.534-0.679-4.742-0.484-6.562,0.579c-4.614,2.694-5.409,10.632-2.827,20.729C17.974,39.971,11.5,44.624,11.5,50	s6.474,10.029,16.518,12.799c-2.582,10.096-1.787,18.035,2.827,20.729c1.112,0.649,2.368,0.976,3.756,0.975	c0.883,0,1.82-0.132,2.806-0.396c3.818-1.023,8.193-4.01,12.593-8.399c4.4,4.389,8.775,7.376,12.593,8.399	c0.986,0.264,1.923,0.396,2.806,0.396c1.388,0,2.644-0.325,3.756-0.975c4.614-2.694,5.408-10.633,2.827-20.729	C82.026,60.029,88.5,55.376,88.5,50z M63.369,18.791c0.725-0.193,1.397-0.291,2.016-0.291c0.86,0,1.616,0.188,2.257,0.563	c3.092,1.806,3.723,8.42,1.42,17.411c-3.173-0.714-6.635-1.251-10.314-1.583c-2.159-3.113-4.405-5.947-6.668-8.429	C56.098,22.435,60.04,19.683,63.369,18.791z M60.755,56.299c-1.179,2.066-2.42,4.045-3.693,5.939C54.802,62.407,52.446,62.5,50,62.5	s-4.802-0.093-7.061-0.262c-1.273-1.894-2.514-3.873-3.693-5.939c-1.219-2.136-2.313-4.24-3.293-6.298	c0.98-2.058,2.074-4.162,3.293-6.299c1.18-2.067,2.42-4.046,3.694-5.94C45.199,37.593,47.554,37.5,50,37.5s4.801,0.093,7.061,0.262	c1.273,1.894,2.514,3.874,3.694,5.94c1.219,2.136,2.313,4.24,3.293,6.299C63.068,52.059,61.974,54.163,60.755,56.299z M65.644,53.545c1.041,2.461,1.901,4.83,2.597,7.082c-2.275,0.507-4.731,0.93-7.354,1.243c0.842-1.326,1.672-2.682,2.473-4.085	C64.171,56.366,64.928,54.951,65.644,53.545z M50,71.357c-1.636-1.809-3.269-3.812-4.864-5.979C46.728,65.455,48.348,65.5,50,65.5	s3.272-0.045,4.864-0.122C53.269,67.544,51.636,69.547,50,71.357z M39.112,61.87c-2.622-0.313-5.079-0.736-7.354-1.243	c0.696-2.252,1.556-4.622,2.597-7.082c0.716,1.406,1.474,2.821,2.284,4.24C37.441,59.189,38.27,60.545,39.112,61.87z M34.356,46.456	c-1.041-2.461-1.902-4.831-2.597-7.084c2.275-0.507,4.732-0.93,7.355-1.243c-0.843,1.326-1.672,2.683-2.473,4.086	C35.829,43.635,35.072,45.05,34.356,46.456z M50,28.644c1.636,1.809,3.269,3.812,4.864,5.979C53.272,34.545,51.652,34.5,50,34.5	s-3.272,0.045-4.864,0.122C46.731,32.456,48.364,30.453,50,28.644z M63.36,42.216c-0.801-1.404-1.631-2.76-2.473-4.086	c2.623,0.313,5.079,0.736,7.355,1.243c-0.696,2.253-1.556,4.622-2.597,7.084C64.928,45.05,64.171,43.635,63.36,42.216z M32.358,19.063C33,18.688,33.754,18.5,34.615,18.5c0.618,0,1.292,0.098,2.016,0.291c3.329,0.892,7.271,3.643,11.289,7.67	c-2.263,2.482-4.509,5.317-6.668,8.429c-3.679,0.332-7.142,0.869-10.314,1.583C28.635,27.482,29.266,20.868,32.358,19.063z M14.5,50	c0-3.596,5.401-7.44,14.335-9.901c0.969,3.159,2.241,6.486,3.806,9.901c-1.565,3.415-2.837,6.742-3.806,9.901	C19.901,57.44,14.5,53.596,14.5,50z M36.631,81.209c-1.733,0.462-3.17,0.371-4.273-0.271c-3.092-1.806-3.722-8.42-1.42-17.411	c3.172,0.714,6.635,1.251,10.313,1.583c2.159,3.113,4.405,5.947,6.668,8.43C43.902,77.566,39.96,80.317,36.631,81.209z M67.642,80.938c-1.103,0.644-2.539,0.734-4.273,0.271c-3.329-0.892-7.271-3.643-11.289-7.67c2.263-2.482,4.509-5.317,6.668-8.43	c3.679-0.332,7.141-0.869,10.313-1.583C71.365,72.518,70.734,79.132,67.642,80.938z M71.165,59.901	c-0.969-3.159-2.241-6.486-3.806-9.901c1.565-3.415,2.837-6.743,3.806-9.901C80.099,42.56,85.5,46.404,85.5,50	S80.099,57.44,71.165,59.901z">
+                                </path>
+                                <path fill="#1f212b"
+                                    d="M34.595,85.002c-1.471,0-2.817-0.351-4.001-1.043c-4.632-2.705-5.783-10.276-3.178-20.811	C16.975,60.179,11,55.4,11,50s5.975-10.179,16.415-13.148c-2.604-10.535-1.453-18.106,3.179-20.811	c1.938-1.134,4.273-1.346,6.943-0.63c3.718,0.996,8.02,3.82,12.463,8.179c4.444-4.359,8.746-7.183,12.463-8.179	c2.669-0.714,5.005-0.502,6.944,0.63c4.631,2.705,5.782,10.276,3.178,20.811C83.025,39.821,89,44.6,89,50	s-5.975,10.179-16.415,13.148c2.604,10.535,1.454,18.105-3.178,20.811c-1.927,1.125-4.286,1.342-6.943,0.63	c-3.719-0.996-8.021-3.82-12.464-8.178c-4.443,4.358-8.745,7.183-12.463,8.178c-1.023,0.274-2.011,0.413-2.936,0.413	C34.599,85.002,34.597,85.002,34.595,85.002z M34.604,15.999c-1.301,0-2.474,0.302-3.507,0.906	c-4.224,2.467-5.194,10.008-2.595,20.173c0.067,0.264-0.089,0.534-0.352,0.606C18.038,40.472,12,45.077,12,50	s6.038,9.528,16.151,12.316c0.263,0.072,0.419,0.342,0.352,0.606c-2.6,10.165-1.63,17.707,2.594,20.173	c1.03,0.601,2.207,0.906,3.498,0.906c0.002,0,0.004,0,0.006,0c0.838,0,1.738-0.127,2.677-0.378c3.647-0.977,7.925-3.836,12.369-8.27	c0.195-0.194,0.511-0.194,0.706,0c4.444,4.433,8.722,7.292,12.369,8.27c2.394,0.639,4.485,0.461,6.181-0.528	c4.224-2.467,5.194-10.008,2.594-20.173c-0.067-0.264,0.089-0.534,0.352-0.606C81.962,59.528,88,54.923,88,50	s-6.038-9.528-16.151-12.316c-0.263-0.072-0.419-0.342-0.352-0.606c2.599-10.165,1.629-17.707-2.595-20.173	c-1.699-0.993-3.779-1.17-6.181-0.528c-3.647,0.977-7.924,3.836-12.369,8.27c-0.195,0.194-0.511,0.194-0.706,0	c-4.445-4.434-8.722-7.293-12.369-8.27C36.336,16.125,35.444,15.999,34.604,15.999z M65.386,81.999	c-0.663,0-1.379-0.102-2.146-0.307c-3.331-0.893-7.312-3.589-11.514-7.8c-0.188-0.189-0.195-0.493-0.016-0.69	c2.265-2.484,4.494-5.303,6.627-8.378c0.084-0.122,0.218-0.2,0.366-0.213c3.612-0.326,7.06-0.855,10.249-1.573	c0.261-0.059,0.527,0.101,0.594,0.364c2.336,9.123,1.703,16.008-1.652,17.967l0,0C67.175,81.789,66.336,81.999,65.386,81.999z M52.771,73.521c3.951,3.894,7.653,6.381,10.727,7.205c1.599,0.427,2.909,0.353,3.892-0.22l0,0	c2.855-1.668,3.357-8.073,1.306-16.387c-3.028,0.659-6.277,1.152-9.67,1.467C57.01,68.478,54.908,71.144,52.771,73.521z M34.614,81.999c-0.95,0-1.789-0.21-2.508-0.629c-3.355-1.96-3.989-8.845-1.652-17.968c0.067-0.262,0.333-0.419,0.594-0.364	c3.188,0.718,6.636,1.247,10.249,1.573c0.147,0.013,0.282,0.091,0.366,0.213c2.133,3.075,4.362,5.894,6.627,8.378	c0.18,0.197,0.173,0.501-0.016,0.69c-4.202,4.21-8.183,6.907-11.513,7.8h0C35.993,81.896,35.276,81.999,34.614,81.999z M31.304,64.119c-2.051,8.313-1.549,14.719,1.306,16.387c0.982,0.572,2.292,0.647,3.892,0.22l0,0	c3.074-0.824,6.776-3.312,10.727-7.205c-2.136-2.377-4.238-5.043-6.254-7.935C37.582,65.271,34.332,64.778,31.304,64.119z M50,71.856c-0.141,0-0.276-0.06-0.371-0.165c-1.663-1.839-3.31-3.864-4.896-6.018c-0.114-0.155-0.129-0.363-0.038-0.533	c0.091-0.17,0.261-0.274,0.465-0.263c3.306,0.161,6.374,0.161,9.68,0c0.2-0.012,0.374,0.093,0.465,0.263	c0.091,0.17,0.077,0.377-0.038,0.533c-1.586,2.153-3.233,4.178-4.896,6.018C50.276,71.796,50.141,71.856,50,71.856z M46.167,65.924	c1.251,1.655,2.537,3.226,3.833,4.684c1.297-1.458,2.582-3.028,3.833-4.684C51.221,66.024,48.779,66.024,46.167,65.924z M50,63	c-2.369,0-4.757-0.088-7.099-0.263c-0.153-0.011-0.292-0.092-0.378-0.22c-1.337-1.989-2.586-3.998-3.712-5.97	c-1.18-2.068-2.294-4.198-3.31-6.332c-0.065-0.136-0.065-0.294,0-0.43c1.016-2.134,2.13-4.264,3.31-6.332	c1.125-1.97,2.374-3.979,3.713-5.971c0.085-0.127,0.225-0.208,0.378-0.22c4.684-0.35,9.513-0.35,14.196,0	c0.153,0.011,0.292,0.092,0.378,0.22c1.339,1.992,2.588,4.001,3.713,5.971c1.18,2.068,2.294,4.198,3.31,6.332	c0.065,0.136,0.065,0.294,0,0.43c-1.016,2.134-2.13,4.264-3.31,6.332l0,0c-1.126,1.972-2.375,3.981-3.712,5.97	c-0.085,0.127-0.225,0.208-0.378,0.22C54.757,62.912,52.369,63,50,63z M43.218,61.757c4.479,0.322,9.085,0.322,13.563,0	c1.273-1.903,2.463-3.822,3.539-5.707c1.128-1.977,2.195-4.011,3.173-6.05c-0.978-2.039-2.045-4.074-3.173-6.05	c-1.075-1.883-2.265-3.802-3.54-5.708c-4.479-0.322-9.084-0.322-13.563,0c-1.274,1.906-2.465,3.825-3.54,5.708	c-1.128,1.977-2.195,4.011-3.173,6.05c0.978,2.039,2.045,4.074,3.173,6.05C40.755,57.936,41.945,59.854,43.218,61.757z M60.888,62.371c-0.17,0-0.331-0.087-0.423-0.233c-0.103-0.164-0.102-0.372,0.001-0.535c0.928-1.461,1.733-2.791,2.46-4.065	c0.764-1.338,1.528-2.758,2.273-4.219c0.088-0.173,0.273-0.276,0.463-0.272c0.194,0.007,0.367,0.125,0.443,0.305	c1.015,2.399,1.894,4.798,2.614,7.129c0.042,0.133,0.025,0.278-0.045,0.398c-0.07,0.121-0.188,0.207-0.324,0.237	c-2.35,0.525-4.841,0.946-7.403,1.252C60.927,62.37,60.907,62.371,60.888,62.371z M65.596,54.731	c-0.594,1.138-1.198,2.245-1.801,3.302c-0.583,1.022-1.216,2.079-1.92,3.209c1.97-0.262,3.89-0.593,5.727-0.987	C67.025,58.441,66.353,56.59,65.596,54.731z M39.112,62.371c-0.02,0-0.04-0.001-0.06-0.003C36.491,62.061,34,61.64,31.65,61.115	c-0.136-0.03-0.253-0.116-0.324-0.237c-0.07-0.121-0.086-0.265-0.045-0.398c0.72-2.332,1.599-4.73,2.614-7.129	c0.076-0.179,0.249-0.298,0.443-0.305c0.182-0.019,0.375,0.099,0.463,0.272c0.745,1.461,1.509,2.881,2.273,4.219	c0.728,1.274,1.533,2.604,2.46,4.065c0.104,0.163,0.104,0.371,0.001,0.535C39.443,62.284,39.283,62.371,39.112,62.371z M32.399,60.255c1.837,0.394,3.757,0.725,5.727,0.987c-0.705-1.13-1.337-2.187-1.92-3.209c-0.604-1.057-1.207-2.165-1.801-3.302	C33.647,56.59,32.975,58.441,32.399,60.255z M71.165,60.401c-0.215,0-0.412-0.139-0.478-0.354c-0.975-3.179-2.248-6.489-3.782-9.838	c-0.061-0.132-0.061-0.285,0-0.417c1.534-3.349,2.807-6.66,3.783-9.84c0.08-0.259,0.354-0.404,0.611-0.335	C80.367,42.116,86,46.094,86,50s-5.634,7.884-14.703,10.383C71.253,60.395,71.208,60.401,71.165,60.401z M67.909,50	c1.436,3.155,2.643,6.277,3.589,9.288C79.717,56.945,85,53.322,85,50s-5.283-6.945-13.502-9.288	C70.551,43.724,69.344,46.846,67.909,50z M28.835,60.401c-0.044,0-0.088-0.006-0.133-0.018C19.634,57.884,14,53.906,14,50	s5.633-7.884,14.702-10.383c0.258-0.069,0.531,0.076,0.611,0.335c0.976,3.18,2.249,6.491,3.783,9.84	c0.061,0.132,0.061,0.284,0,0.417c-1.535,3.35-2.807,6.66-3.782,9.838C29.248,60.262,29.05,60.401,28.835,60.401z M28.502,40.712	C20.283,43.055,15,46.678,15,50s5.283,6.945,13.502,9.288c0.947-3.011,2.153-6.132,3.589-9.288	C30.656,46.846,29.449,43.724,28.502,40.712z M65.645,46.957c-0.188,0-0.36-0.105-0.446-0.273c-0.757-1.488-1.501-2.869-2.272-4.22	l0,0c-0.726-1.272-1.531-2.602-2.461-4.066c-0.104-0.163-0.104-0.371-0.001-0.535c0.103-0.163,0.287-0.253,0.483-0.23	c2.563,0.307,5.054,0.728,7.404,1.252c0.136,0.03,0.253,0.116,0.324,0.237c0.07,0.121,0.086,0.265,0.045,0.398	c-0.721,2.336-1.601,4.735-2.614,7.131c-0.076,0.179-0.249,0.298-0.443,0.305C65.656,46.957,65.65,46.957,65.645,46.957z M63.794,41.968c0.611,1.07,1.205,2.158,1.801,3.302c0.756-1.856,1.428-3.709,2.005-5.525c-1.837-0.394-3.757-0.725-5.728-0.987	C62.58,39.89,63.212,40.947,63.794,41.968L63.794,41.968z M34.355,46.957c-0.006,0-0.012,0-0.018,0	c-0.194-0.007-0.367-0.125-0.443-0.305c-1.013-2.396-1.893-4.795-2.614-7.131c-0.042-0.133-0.025-0.278,0.045-0.398	c0.07-0.121,0.188-0.207,0.324-0.237c2.35-0.525,4.841-0.946,7.404-1.252c0.195-0.02,0.38,0.067,0.483,0.23	c0.103,0.164,0.102,0.372-0.001,0.535c-0.93,1.464-1.735,2.794-2.461,4.066c-0.771,1.351-1.515,2.731-2.272,4.22	C34.715,46.852,34.543,46.957,34.355,46.957z M32.399,39.745c0.577,1.816,1.25,3.669,2.005,5.525	c0.597-1.144,1.19-2.232,1.801-3.302c0.583-1.021,1.215-2.078,1.921-3.21C36.156,39.02,34.236,39.351,32.399,39.745z M69.063,36.974	c-0.037,0-0.073-0.004-0.11-0.012c-3.188-0.718-6.637-1.247-10.25-1.573c-0.147-0.013-0.282-0.091-0.366-0.213	c-2.133-3.076-4.363-5.894-6.627-8.377c-0.18-0.197-0.173-0.501,0.016-0.69c4.201-4.21,8.183-6.908,11.514-7.8h0	c1.869-0.5,3.438-0.387,4.654,0.322c3.355,1.96,3.989,8.845,1.653,17.968C69.489,36.823,69.287,36.974,69.063,36.974z M59.025,34.414c3.393,0.315,6.643,0.808,9.671,1.467c2.051-8.313,1.549-14.719-1.307-16.387c-0.979-0.571-2.291-0.646-3.891-0.22	c-3.074,0.824-6.777,3.312-10.728,7.206C54.907,28.855,57.009,31.521,59.025,34.414z M30.937,36.974	c-0.224,0-0.426-0.151-0.484-0.376c-2.336-9.123-1.703-16.007,1.652-17.967c0,0,0,0,0.001,0c1.216-0.709,2.787-0.822,4.653-0.322	c3.332,0.893,7.313,3.59,11.514,7.8c0.188,0.189,0.195,0.493,0.016,0.69c-2.264,2.483-4.494,5.302-6.627,8.377	c-0.084,0.122-0.218,0.2-0.366,0.213c-3.612,0.326-7.061,0.855-10.25,1.573C31.01,36.97,30.974,36.974,30.937,36.974z M32.61,19.494	c-2.855,1.668-3.357,8.074-1.307,16.387c3.028-0.659,6.278-1.152,9.671-1.467c2.017-2.893,4.118-5.559,6.254-7.935	c-3.951-3.894-7.653-6.382-10.728-7.206C34.907,18.848,33.593,18.922,32.61,19.494L32.61,19.494z M54.864,35.122	c-0.008,0-0.016,0-0.024,0c-3.306-0.161-6.373-0.161-9.679,0c-0.206,0.005-0.374-0.094-0.465-0.263	c-0.091-0.17-0.077-0.377,0.038-0.533c1.587-2.155,3.234-4.18,4.896-6.018c0.19-0.209,0.552-0.209,0.742,0	c1.661,1.837,3.308,3.862,4.896,6.018c0.114,0.155,0.129,0.363,0.038,0.533C55.217,35.021,55.047,35.122,54.864,35.122z M50,34	c1.242,0,2.527,0.026,3.833,0.077c-1.252-1.657-2.538-3.228-3.833-4.684c-1.295,1.457-2.581,3.027-3.833,4.684	C47.473,34.026,48.758,34,50,34z">
+                                </path>
+                            </svg></div>
+                        <div class="skill-info">
+                            <h4>React</h4>
+                        </div>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-category="frontend" data-level="90" data-years="2">
+                    <div class="skill-card">
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                height="100" viewBox="0 0 64 64">
+                                <linearGradient id="9GkdZLxQa1XTDblOFwLcpa_t4YbEbA834uH_gr1" x1="32" x2="32" y1="25.213"
+                                    y2="36.722" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#6dc7ff"></stop>
+                                    <stop offset="1" stop-color="#e6abff"></stop>
+                                </linearGradient>
+                                <circle cx="32" cy="32" r="6" fill="url(#9GkdZLxQa1XTDblOFwLcpa_t4YbEbA834uH_gr1)">
+                                </circle>
+                                <linearGradient id="9GkdZLxQa1XTDblOFwLcpb_t4YbEbA834uH_gr2" x1="32" x2="32" y1="7.426"
+                                    y2="53.44" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#1a6dff"></stop>
+                                    <stop offset="1" stop-color="#c822ff"></stop>
+                                </linearGradient>
+                                <path fill="url(#9GkdZLxQa1XTDblOFwLcpb_t4YbEbA834uH_gr2)"
+                                    d="M58,32c0-3.758-4.243-7.017-10.853-8.992c0.221-1.031,0.407-2.045,0.524-3.015	c0.657-5.483-0.483-9.323-3.211-10.813c-2.729-1.489-6.574-0.372-10.831,3.146c-0.544,0.449-1.087,0.938-1.629,1.45	c-0.542-0.513-1.085-1.001-1.629-1.45C26.114,8.808,22.267,7.692,19.54,9.18c-2.728,1.489-3.868,5.329-3.211,10.813	c0.116,0.971,0.303,1.984,0.524,3.015C10.243,24.983,6,28.242,6,32s4.243,7.017,10.853,8.992c-0.221,1.031-0.407,2.045-0.524,3.015	c-0.657,5.483,0.483,9.323,3.211,10.813c0.789,0.431,1.67,0.643,2.628,0.643c2.357,0,5.177-1.287,8.203-3.788	c0.544-0.449,1.087-0.938,1.629-1.45c0.542,0.513,1.085,1.001,1.629,1.45c3.026,2.501,5.846,3.788,8.203,3.788	c0.958,0,1.84-0.213,2.628-0.643c2.728-1.489,3.868-5.329,3.211-10.813c-0.116-0.971-0.303-1.984-0.524-3.015	C53.757,39.017,58,35.758,58,32z M34.902,13.866c3.53-2.917,6.665-3.987,8.599-2.931c1.934,1.055,2.729,4.27,2.184,8.818	c-0.105,0.879-0.273,1.796-0.469,2.729c-2.117-0.519-4.43-0.915-6.892-1.166c-1.564-2.275-3.215-4.351-4.908-6.132	C33.91,14.718,34.406,14.276,34.902,13.866z M39.899,36.313c-0.853,1.562-1.76,3.055-2.702,4.474C35.546,40.925,33.811,41,32,41	s-3.546-0.075-5.198-0.213c-0.941-1.42-1.849-2.912-2.702-4.474c-0.784-1.435-1.499-2.878-2.142-4.313	c0.643-1.434,1.358-2.877,2.142-4.313c0.853-1.562,1.76-3.055,2.702-4.474C28.454,23.075,30.189,23,32,23s3.546,0.075,5.198,0.213	c0.941,1.42,1.849,2.912,2.702,4.474c0.784,1.435,1.499,2.878,2.142,4.313C41.399,33.434,40.683,34.877,39.899,36.313z M43.078,34.487c0.68,1.739,1.238,3.444,1.676,5.096c-1.544,0.376-3.21,0.694-5.009,0.929c0.657-1.05,1.3-2.124,1.909-3.241	C42.161,36.346,42.629,35.416,43.078,34.487z M32,47.403c-1.272-1.341-2.522-2.863-3.729-4.513C29.487,42.961,30.73,43,32,43	s2.513-0.039,3.729-0.11C34.522,44.54,33.272,46.062,32,47.403z M24.254,40.512c-1.799-0.235-3.465-0.553-5.009-0.929	c0.438-1.652,0.996-3.358,1.676-5.096c0.45,0.93,0.918,1.859,1.423,2.785C22.954,38.388,23.597,39.462,24.254,40.512z M20.922,29.513c-0.68-1.739-1.238-3.445-1.676-5.096c1.544-0.376,3.21-0.694,5.009-0.929c-0.657,1.05-1.3,2.124-1.909,3.241	C21.839,27.654,21.371,28.584,20.922,29.513z M32,16.597c1.272,1.341,2.522,2.863,3.729,4.513C34.513,21.039,33.27,21,32,21	s-2.513,0.039-3.729,0.11C29.478,19.46,30.728,17.938,32,16.597z M41.655,26.729c-0.609-1.116-1.252-2.19-1.909-3.241	c1.799,0.235,3.465,0.553,5.009,0.929c-0.438,1.652-0.996,3.358-1.676,5.096C42.629,28.584,42.161,27.654,41.655,26.729z M18.315,19.754c-0.546-4.549,0.25-7.764,2.184-8.818c0.488-0.267,1.053-0.397,1.681-0.397c1.86,0,4.278,1.147,6.918,3.328	c0.496,0.41,0.993,0.852,1.488,1.319c-1.693,1.781-3.345,3.856-4.908,6.132c-2.463,0.251-4.776,0.648-6.892,1.166	C18.588,21.55,18.421,20.633,18.315,19.754z M8,32c0-2.6,3.47-5.303,9.317-7.06c0.606,2.279,1.437,4.654,2.471,7.06	c-1.034,2.407-1.865,4.782-2.471,7.06C11.47,37.303,8,34.6,8,32z M29.098,50.134c-3.53,2.917-6.662,3.989-8.599,2.931	c-1.934-1.055-2.729-4.27-2.184-8.818c0.105-0.879,0.273-1.796,0.469-2.729c2.117,0.519,4.43,0.915,6.892,1.166	c1.564,2.275,3.215,4.351,4.908,6.132C30.09,49.282,29.594,49.724,29.098,50.134z M45.685,44.246	c0.546,4.549-0.25,7.764-2.184,8.818c-1.934,1.059-5.068-0.014-8.599-2.931c-0.496-0.41-0.993-0.852-1.488-1.319	c1.693-1.781,3.345-3.856,4.908-6.132c2.463-0.251,4.776-0.648,6.892-1.166C45.412,42.45,45.579,43.367,45.685,44.246z M46.683,39.06c-0.606-2.279-1.437-4.654-2.471-7.06c1.034-2.407,1.865-4.782,2.471-7.06C52.53,26.697,56,29.4,56,32	S52.53,37.303,46.683,39.06z">
+                                </path>
+                            </svg></div>
+                        <div class="skill-info">
+                            <h4>React Native</h4>
+                        </div>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-category="languages" data-level="70" data-years="1">
+                    <div class="skill-card">
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                height="100" viewBox="0 0 48 48">
+                                <path fill="#1565c0"
+                                    d="M10,12l3,25l-8.019-8.019c-1.189-1.189-1.508-2.996-0.796-4.52L10,12z"></path>
+                                <path fill="#42a5f5"
+                                    d="M27.319,6.319C26.474,5.474,25.329,5,24.135,5c-0.745,0-1.479,0.185-2.135,0.538L10,12v20.343 c0,1.061,0.421,2.078,1.172,2.828L13,37h22v-5l7-11L27.319,6.319z">
+                                </path>
+                                <path fill="#1565c0"
+                                    d="M10,12h21.343c1.061,0,2.078,0.421,2.828,1.172L42,21v16h-7L10,12z"></path>
+                                <polygon fill="#85cbf8" points="35,37 13,37 19,43 35,43"></polygon>
+                            </svg></div>
+                        <div class="skill-info">
+                            <h4>Dart</h4>
+                        </div>
+
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-category="frontend" data-level="85" data-years="1.5">
+                    <div class="skill-card">
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                height="100" viewBox="0 0 48 48">
+                                <polygon fill="#40c4ff" points="26,4 6,24 12,30 38,4"></polygon>
+                                <polygon fill="#40c4ff" points="38,22 27,33 21,27 26,22"></polygon>
+                                <rect width="8.485" height="8.485" x="16.757" y="28.757" fill="#03a9f4"
+                                    transform="rotate(-45.001 21 33)"></rect>
+                                <polygon fill="#01579b" points="38,44 26,44 21,39 27,33"></polygon>
+                                <polygon fill="#084994" points="21,39 30,36 27,33"></polygon>
+                            </svg></div>
+                        <div class="skill-info">
+                            <h4>Flutter</h4>
+                        </div>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-category="frontend" data-level="95" data-years="3">
+                    <div class="skill-card">
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                height="100" viewBox="0 0 48 48">
+                                <polygon fill="#e7a42b" points="8,5 42,5 38,39 25,43 11,39"></polygon>
+                                <polygon fill="#f2bf22" points="38.63,8 35.25,36.71 25,39.86 25,8"></polygon>
+                                <polygon fill="#faf9f8"
+                                    points="25,21 26,23 25,25 15.79,25 16.64,12 25,12 26,14 25,16 21.03,16 20.7,21">
+                                </polygon>
+                                <polygon fill="#ebebeb"
+                                    points="24.9,32.57 25,32.54 26,35 25,36.72 24.94,36.74 16.61,34.36 16.05,28 20.07,28 20.35,31.27">
+                                </polygon>
+                                <polygon fill="#fff"
+                                    points="34.07,21 32.5,34.42 25,36.72 25,32.54 28.83,31.36 29.57,25 25,25 25,21">
+                                </polygon>
+                                <polygon fill="#fff"
+                                    points="34.92,18 30.93,18 30.67,16 25,16 25,12 34.13,12 34.3,13.26"></polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0 0 32 32">
+                                <path
+                                    d="M 6 4 L 8 25 L 16 28 L 24 25 L 26 4 L 6 4 z M 9.3320312 7 L 22.652344 7 L 22.390625 10 L 16.695312 13 L 19.121094 13 L 22 13 L 22.123047 13 L 21.611328 19.007812 L 21.630859 19 L 21.355469 22 L 16 24 L 10.634766 22 L 10.304688 18 L 13.326172 18 L 13.482422 20.033203 L 16 20.904297 L 18.521484 20.050781 L 18.867188 16 L 10.130859 16 L 9.8730469 13 L 15.783203 10 L 9.609375 10 L 9.3320312 7 z">
+                                </path>
+                            </svg>
+
+                        </div>
+                        <div class="skill-info">
+                            <h4>HTML/CSS</h4>
+                        </div>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-category="frontend" data-level="80" data-years="1.5">
+                    <div class="skill-card">
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                height="100" viewBox="0 0 48 48">
+                                <path fill="#00acc1"
+                                    d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z">
+                                </path>
+                            </svg></div>
+                        <div class="skill-info">
+                            <h4>Tailwind CSS</h4>
+                        </div>
+
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-category="frontend" data-level="70" data-years="1">
+                    <div class="skill-card">
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                height="100" viewBox="0 0 48 48">
+                                <polygon fill="#29b6f6" points="1,5 7,9 7,29 1,25"></polygon>
+                                <polygon fill="#0288d1" points="47,20 41,24 41,37 47,33"></polygon>
+                                <polygon fill="#0288d1" points="47,6 41,10 41,17 47,13"></polygon>
+                                <polygon fill="#0288d1" points="35,5 29,9 29,29 35,25"></polygon>
+                                <polygon fill="#29b6f6" points="1,12 18,23 18,16 1,5"></polygon>
+                                <polygon fill="#0288d1" points="35,12 18,23 18,16 35,5"></polygon>
+                                <polygon fill="#0288d1" points="35,26 18,37 18,30 35,19"></polygon>
+                                <polygon fill="#0288d1" points="47,34 30,45 30,38 47,27"></polygon>
+                                <polygon fill="#29b6f6" points="30,37.765 18,30 18,37 30,44.765"></polygon>
+                            </svg></div>
+                        <div class="skill-info">
+                            <h4>Material-UI</h4>
+                        </div>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+
+                <!-- Backend Technologies -->
+                <div class="skill-item" data-category="backend" data-level="95" data-years="2">
+                    <div class="skill-card">
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                height="100" viewBox="0 0 48 48">
+                                <path fill="#8bc34a"
+                                    d="M43.982,23.635c0.069-4.261-0.891-9.328-2.891-15.273l-1.568-4.662l-2.13,4.433 c-0.114,0.237-0.244,0.469-0.38,0.698C33.514,5.827,28.974,4,24,4C12.954,4,4,12.954,4,24c0,11.046,8.954,20,20,20s20-8.954,20-20 C44,23.877,43.984,23.758,43.982,23.635z">
+                                </path>
+                                <path fill="#fff"
+                                    d="M39.385 32.558c-3.123 4.302-8.651 4.533-13.854 4.442H18.75h-1.938c4.428-1.593 7.063-1.972 9.754-3.4 5.068-2.665 10.078-8.496 11.121-14.562-1.93 5.836-7.779 10.85-13.109 12.889-3.652 1.393-10.248 2.745-10.248 2.745l-.267-.145C9.573 32.268 9.437 22.214 17.6 18.968c3.574-1.423 6.993-.641 10.854-1.593 4.122-1.012 8.89-4.208 10.83-8.375C41.456 15.667 44.07 26.106 39.385 32.558L39.385 32.558zM15.668 38.445C15.386 38.795 14.955 39 14.505 39c-.823 0-1.495-.677-1.495-1.5s.677-1.5 1.495-1.5c.341 0 .677.118.941.336C16.086 36.855 16.186 37.805 15.668 38.445L15.668 38.445z">
+                                </path>
+                            </svg></div>
+                        <div class="skill-info">
+                            <h4>Spring Boot</h4>
+                        </div>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+
+
+                <div class="skill-item" data-category="backend" data-level="75" data-years="1">
+                    <div class="skill-card">
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                height="100" viewBox="0 0 48 48">
+                                <path fill="#8bc34a"
+                                    d="M43.982,23.635c0.069-4.261-0.891-9.328-2.891-15.273l-1.568-4.662l-2.13,4.433 c-0.114,0.237-0.244,0.469-0.38,0.698C33.514,5.827,28.974,4,24,4C12.954,4,4,12.954,4,24c0,11.046,8.954,20,20,20s20-8.954,20-20 C44,23.877,43.984,23.758,43.982,23.635z">
+                                </path>
+                                <path fill="#fff"
+                                    d="M39.385 32.558c-3.123 4.302-8.651 4.533-13.854 4.442H18.75h-1.938c4.428-1.593 7.063-1.972 9.754-3.4 5.068-2.665 10.078-8.496 11.121-14.562-1.93 5.836-7.779 10.85-13.109 12.889-3.652 1.393-10.248 2.745-10.248 2.745l-.267-.145C9.573 32.268 9.437 22.214 17.6 18.968c3.574-1.423 6.993-.641 10.854-1.593 4.122-1.012 8.89-4.208 10.83-8.375C41.456 15.667 44.07 26.106 39.385 32.558L39.385 32.558zM15.668 38.445C15.386 38.795 14.955 39 14.505 39c-.823 0-1.495-.677-1.495-1.5s.677-1.5 1.495-1.5c.341 0 .677.118.941.336C16.086 36.855 16.186 37.805 15.668 38.445L15.668 38.445z">
+                                </path>
+                            </svg></div>
+                        <div class="skill-info">
+                            <h4>Spring Cloud</h4>
+                        </div>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-category="backend" data-level="85" data-years="2.5">
+                    <div class="skill-card">
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                height="100" viewBox="0 0 50 50">
+                                <path
+                                    d="M 31.167969 8 C 30.699219 7.988281 30.289063 8.167969 30.078125 8.6875 C 29.71875 9.558594 30.613281 10.410156 30.933594 10.855469 C 31.15625 11.164063 31.445313 11.511719 31.605469 11.859375 C 31.710938 12.089844 31.726563 12.320313 31.816406 12.5625 C 32.039063 13.160156 32.394531 13.839844 32.679688 14.394531 C 32.824219 14.675781 32.984375 14.96875 33.167969 15.21875 C 33.28125 15.371094 33.472656 15.441406 33.503906 15.675781 C 33.316406 15.941406 33.304688 16.351563 33.199219 16.6875 C 32.722656 18.191406 32.902344 20.0625 33.59375 21.171875 C 33.808594 21.515625 34.3125 22.246094 35 21.96875 C 35.601563 21.722656 35.46875 20.960938 35.640625 20.285156 C 35.679688 20.136719 35.65625 20.023438 35.734375 19.921875 L 35.734375 19.953125 C 35.914063 20.320313 36.097656 20.6875 36.28125 21.050781 C 36.691406 21.707031 37.414063 22.390625 38.023438 22.855469 C 38.339844 23.09375 38.589844 23.507813 39 23.648438 L 39 23.617188 L 38.96875 23.617188 C 38.890625 23.492188 38.765625 23.441406 38.664063 23.34375 C 38.425781 23.109375 38.160156 22.816406 37.964844 22.546875 C 37.40625 21.792969 36.914063 20.964844 36.46875 20.105469 C 36.253906 19.695313 36.066406 19.242188 35.886719 18.824219 C 35.816406 18.660156 35.816406 18.417969 35.671875 18.332031 C 35.472656 18.640625 35.183594 18.886719 35.03125 19.25 C 34.789063 19.828125 34.753906 20.535156 34.664063 21.265625 C 34.609375 21.285156 34.632813 21.269531 34.605469 21.296875 C 34.179688 21.191406 34.027344 20.753906 33.871094 20.378906 C 33.472656 19.429688 33.394531 17.898438 33.75 16.808594 C 33.839844 16.523438 34.25 15.632813 34.085938 15.371094 C 34.007813 15.109375 33.742188 14.960938 33.597656 14.761719 C 33.414063 14.515625 33.234375 14.191406 33.109375 13.90625 C 32.78125 13.164063 32.472656 12.304688 32.125 11.554688 C 31.960938 11.195313 31.683594 10.835938 31.453125 10.515625 C 31.199219 10.164063 30.917969 9.90625 30.71875 9.476563 C 30.652344 9.328125 30.554688 9.085938 30.660156 8.929688 C 30.691406 8.824219 30.738281 8.78125 30.84375 8.746094 C 31.019531 8.609375 31.511719 8.789063 31.699219 8.867188 C 32.1875 9.070313 32.597656 9.265625 33.011719 9.539063 C 33.210938 9.671875 33.410156 9.925781 33.652344 10 L 33.925781 10 C 34.359375 10.097656 34.839844 10.027344 35.238281 10.152344 C 35.949219 10.367188 36.585938 10.703125 37.160156 11.066406 C 38.921875 12.175781 40.363281 13.757813 41.34375 15.644531 C 41.503906 15.949219 41.574219 16.242188 41.714844 16.5625 C 41.992188 17.210938 42.347656 17.882813 42.628906 18.515625 C 42.90625 19.152344 43.179688 19.789063 43.574219 20.316406 C 43.78125 20.59375 44.585938 20.746094 44.949219 20.898438 C 45.203125 21.007813 45.625 21.121094 45.863281 21.265625 C 46.328125 21.542969 46.773438 21.875 47.207031 22.183594 C 47.425781 22.335938 48.089844 22.667969 48.125 22.945313 C 47.050781 22.917969 46.230469 23.015625 45.53125 23.3125 C 45.332031 23.398438 45.011719 23.398438 44.980469 23.648438 C 45.085938 23.761719 45.105469 23.933594 45.191406 24.074219 C 45.359375 24.34375 45.640625 24.707031 45.894531 24.898438 C 46.171875 25.105469 46.453125 25.328125 46.75 25.511719 C 47.273438 25.828125 47.859375 26.011719 48.367188 26.332031 C 48.664063 26.523438 48.964844 26.761719 49.253906 26.972656 C 49.398438 27.082031 49.492188 27.246094 49.679688 27.3125 L 49.679688 27.28125 C 49.582031 27.15625 49.558594 26.984375 49.46875 26.855469 L 49.066406 26.453125 C 48.679688 25.941406 48.1875 25.488281 47.664063 25.113281 C 47.246094 24.8125 46.3125 24.40625 46.140625 23.921875 L 46.109375 23.890625 C 46.402344 23.859375 46.75 23.75 47.023438 23.675781 C 47.484375 23.554688 47.890625 23.585938 48.363281 23.464844 C 48.578125 23.402344 48.792969 23.339844 49.007813 23.28125 L 49.007813 23.15625 C 48.769531 22.914063 48.597656 22.585938 48.335938 22.363281 C 47.652344 21.78125 46.90625 21.199219 46.136719 20.714844 C 45.710938 20.445313 45.183594 20.269531 44.734375 20.042969 C 44.582031 19.964844 44.316406 19.925781 44.214844 19.796875 C 43.976563 19.496094 43.847656 19.113281 43.664063 18.761719 C 43.28125 18.023438 42.90625 17.21875 42.566406 16.441406 C 42.335938 15.914063 42.183594 15.390625 41.894531 14.914063 C 40.507813 12.636719 39.015625 11.257813 36.703125 9.90625 C 36.210938 9.617188 35.621094 9.507813 34.996094 9.359375 C 34.65625 9.335938 34.324219 9.316406 33.984375 9.296875 C 33.78125 9.210938 33.566406 8.960938 33.375 8.835938 C 32.894531 8.535156 31.949219 8.011719 31.167969 8 Z M 34.476563 11.3125 C 34.253906 11.308594 34.09375 11.339844 33.925781 11.375 L 33.925781 11.40625 L 33.957031 11.40625 C 34.0625 11.625 34.253906 11.765625 34.386719 11.953125 C 34.488281 12.167969 34.585938 12.382813 34.6875 12.597656 L 34.71875 12.566406 C 34.90625 12.433594 34.996094 12.21875 34.996094 11.894531 C 34.917969 11.816406 34.90625 11.714844 34.84375 11.621094 C 34.753906 11.492188 34.585938 11.421875 34.476563 11.3125 Z M 1.867188 23.996094 C 1.566406 24.007813 1.238281 24.066406 0.882813 24.179688 C 0.289063 24.359375 -0.00390625 24.714844 -0.00390625 25.4375 L -0.00390625 33 L 2 33 L 2 25.621094 L 4.777344 31.929688 C 5.121094 32.714844 5.589844 32.996094 6.507813 32.996094 C 7.429688 32.996094 7.878906 32.714844 8.222656 31.929688 L 11 25.78125 L 11 33 L 13 33 L 13 25.4375 C 13 24.714844 12.710938 24.359375 12.113281 24.179688 C 10.691406 23.730469 9.734375 24.117188 9.304688 25.089844 L 6.453125 31.503906 L 3.695313 25.089844 C 3.382813 24.359375 2.757813 23.960938 1.867188 23.996094 Z M 26.246094 24 C 25.457031 24 23 24.09375 23 26 L 23 27.234375 C 23 28.109375 23.769531 28.824219 25.4375 29 C 25.625 29.011719 25.8125 29.027344 26 29.027344 C 26 29.027344 27.945313 28.988281 28 29 C 29.125 29 29 29.875 29 30 L 29 31 C 29 31.136719 28.96875 32 27.988281 32 L 23 32 L 23 33 L 28.007813 33 C 28.664063 33 29.300781 32.863281 29.808594 32.625 C 30.652344 32.238281 31 31.714844 31 31.027344 L 31 29.597656 C 31 28.0625 29.09375 28 28 28 L 26 28 C 25.214844 28 25.09375 27.523438 25 27 L 25 26 C 25.09375 25.601563 25.269531 25.0625 25.964844 25 L 31 25 L 31 24 Z M 33.980469 24 C 32.503906 24.203125 31.984375 24.9375 31.984375 26 L 31.984375 31 C 31.984375 31.972656 32.527344 32.558594 33.644531 32.863281 C 34.019531 32.96875 34.359375 33.011719 34.679688 33.011719 L 36.90625 33 L 38.214844 33 L 39.328125 34 L 41.578125 34 L 40.03125 32.605469 C 40.757813 32.304688 40.984375 31.84375 40.984375 30.980469 L 40.984375 26 C 40.984375 24.9375 40.292969 24.203125 38.816406 24 Z M 42 24 L 42 30.957031 C 42 32.164063 42.683594 32.84375 44.492188 32.980469 C 44.660156 32.988281 44.832031 33 45 33 L 50 33 L 50 32 L 45.378906 32 C 44.347656 32 44 31.566406 44 30.949219 L 44 24 Z M 35.171875 25 L 37.746094 25 C 38.425781 25 38.882813 25.546875 38.984375 26 C 38.984375 26 39 30.65625 39 31 C 39 31.34375 38.808594 31.5 38.808594 31.5 L 38.265625 31 L 36 31 L 37.113281 32 L 35.171875 32 C 34.476563 32 34.085938 31.484375 33.984375 31 L 33.984375 26.101563 C 33.984375 25.570313 34.390625 25 35.171875 25 Z M 14 27 C 14.039063 27.039063 14 31.261719 14 31.34375 C 14.015625 32.21875 15.125 32.984375 16.863281 33 L 20 33 L 20 33.066406 C 20 33.253906 20.136719 33.878906 19 34 C 18.988281 34 14.011719 34 14 34 L 14 35 L 19.214844 35 C 20.097656 34.972656 22.011719 34.773438 22 33.242188 C 22 33.214844 22.007813 27 22 27 L 20 27 L 20 32 C 19.96875 32 17.523438 32.007813 17.03125 32 C 16.066406 31.984375 15.984375 31.433594 16 31.222656 L 16 27 Z">
+                                </path>
+                            </svg></div>
+                        <div class="skill-info">
+                            <h4>MySQL</h4>
+                        </div>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-category="backend" data-level="85" data-years="2.5">
+                    <div class="skill-card">
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                height="100" viewBox="0 0 50 50">
+                                <path
+                                    d="M 7 2 L 7 48 L 43 48 L 43 14.59375 L 42.71875 14.28125 L 30.71875 2.28125 L 30.40625 2 Z M 9 4 L 29 4 L 29 16 L 41 16 L 41 46 L 9 46 Z M 31 5.4375 L 39.5625 14 L 31 14 Z M 15 22 L 15 24 L 35 24 L 35 22 Z M 15 28 L 15 30 L 31 30 L 31 28 Z M 15 34 L 15 36 L 35 36 L 35 34 Z">
+                                </path>
+                            </svg></div>
+                        <div class="skill-info">
+                            <h4>Jasper Reports</h4>
+                        </div>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-category="languages" data-level="70" data-years="1">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0 0 80 80">
+                                <path fill="#b0c1d4"
+                                    d="M74.01,62.5c-1.795,0-3.517-0.852-4.607-2.277L57.807,45.06L46.211,60.223 c-1.09,1.426-2.812,2.277-4.607,2.277h-3.428L54.66,40.944L38.261,19.5h3.428c1.795,0,3.518,0.851,4.607,2.276l11.51,15.052 l11.51-15.052c1.09-1.426,2.812-2.276,4.607-2.276h3.428L60.954,40.944L77.438,62.5H74.01z">
+                                </path>
+                                <path fill="#66798f"
+                                    d="M76.341,20L60.324,40.944L76.426,62H74.01c-1.651,0-3.207-0.769-4.21-2.081L57.807,44.237 L45.814,59.919C44.811,61.231,43.254,62,41.604,62h-2.417l16.102-21.056L39.273,20h2.417c1.651,0,3.207,0.769,4.21,2.081 l11.907,15.571l11.907-15.571C70.717,20.769,72.273,20,73.924,20H76.341 M78.364,19h-2.024h-2.417c-1.949,0-3.82,0.925-5.005,2.473 L57.807,36.005L46.694,21.473C45.51,19.925,43.639,19,41.689,19h-2.417h-2.024l1.229,1.607L54.03,40.944L38.393,61.393L37.163,63 h2.024h2.417c1.949,0,3.82-0.925,5.005-2.473l11.198-14.644l11.198,14.644C70.189,62.075,72.06,63,74.01,63h2.417h2.024 l-1.229-1.607L61.583,40.944l15.552-20.337L78.364,19L78.364,19z">
+                                </path>
+                                <g>
+                                    <path fill="#b0c1d4"
+                                        d="M20,64.5c-10.201,0-18.5-8.594-18.5-19.156v-8.689C1.5,26.093,9.799,17.5,20,17.5 s18.5,8.593,18.5,19.154v7.845L6.5,44.5v0.844C6.5,53.15,12.556,59.5,20,59.5c4.111,0,8.093-2.067,10.653-5.529 c1.161-1.571,2.86-2.472,4.661-2.472h1.711l0.204,0.204l0.134,0.268l-0.075,0.203C34.571,59.547,27.624,64.5,20,64.5z M33.5,39.5 v-2.846C33.5,28.85,27.444,22.5,20,22.5S6.5,28.85,6.5,36.655V39.5H33.5z">
+                                    </path>
+                                    <path fill="#66798f"
+                                        d="M20,18c9.925,0,18,8.369,18,18.654v7.345L6,44v1.344C6,53.426,12.28,60,20,60 c4.376,0,8.446-2.203,11.055-5.732c1.016-1.374,2.55-2.269,4.259-2.269l1.505,0C36.819,52,36.819,52,36.819,52.001 C34.175,59.176,27.411,64,20,64c-9.925,0-18-8.369-18-18.656v-8.689C2,26.369,10.075,18,20,18 M6,40h28v-3.346 C34,28.574,27.72,22,20,22S6,28.574,6,36.654V40 M20,17C9.523,17,1,25.817,1,36.654v8.689C1,56.182,9.523,65,20,65 c7.832,0,14.968-5.085,17.758-12.653l0.496-1.346l-1.435-0.002l-1.505,0c-1.961,0-3.806,0.975-5.063,2.675 C27.785,57.009,23.953,59,20,59c-7.168,0-13-6.126-13-13.656V45l31-0.001l1,0v-1v-7.345C39,25.817,30.477,17,20,17L20,17z M7,39 v-2.346C7,29.125,12.832,23,20,23s13,6.125,13,13.654V39H7L7,39z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Express js</h4>
+                        </div>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+
+
+                <!-- Tools & DevOps -->
+                <div class="skill-item" data-category="tools" data-level="90" data-years="2">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0 0 48 48">
+                                <path fill="#F4511E"
+                                    d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Git/GitHub</h4>
+                        </div>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-category="tools" data-level="75" data-years="1">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0 0 48 48">
+                                <path fill="#03A9F4"
+                                    d="M40,20c0.391-1.735-0.092-3.78-2.5-6c-3.914,3.543-2.795,7.227-1.5,9c0,0-0.166,1-4,1S2,24,2,24S0.167,40,18,40c15.593,0,19.973-12.003,20.828-15.076C39.182,24.972,39.579,25.003,40,25c2.147-0.017,4.93-1.171,6-5.484C43.162,18.533,41.339,18.978,40,20z">
+                                </path>
+                                <path fill="#0288D1"
+                                    d="M2.165,28C2.9,32.739,5.983,40,18,40c12.185,0,17.523-7.33,19.682-12H2.165z">
+                                </path>
+                                <path fill="#81D4FA"
+                                    d="M19.812,39.938C18.892,39.616,14.74,38.848,14,33c-4.209,1.863-7.938,1.375-9.579,1.008C6.583,37.237,10.591,40,18,40C18.623,40,19.224,39.976,19.812,39.938z">
+                                </path>
+                                <path fill="#FFF" d="M18 30A2 2 0 1 0 18 34A2 2 0 1 0 18 30Z"></path>
+                                <path fill="#37474F"
+                                    d="M14.914,33.597c0.224,0.505,0.02,1.162-0.51,1.318c-3.301,0.973-6.146,1.102-8.297,1.102c-0.644-0.619-1.194-1.279-1.656-1.963c2.585,0,6.71-0.12,9.144-0.966C14.117,32.906,14.69,33.09,14.914,33.597z M2,27c0,0,1.875,0.125,3-1c1.875,1.688,5.94,1.088,7,0c1.063,1.688,6.938,1.375,8,0c1.25,1.438,6.625,1.75,8,0c0.479,1.461,6.819,1.874,8,0c1.061,1.088,5.063,1.938,7.311,0C43.875,27.188,46,27,46,27v1H2 M17,32c0,0.552,0.448,1,1,1s1-0.448,1-1s-0.448-1-1-1S17,31.448,17,32z">
+                                </path>
+                                <path fill="#01579B"
+                                    d="M11,24H6v-5h5V24z M21,19h-5v5h5V19z M31,19h-5v5h5V19z M16,14h-5v5h5V14z M26,14h-5v5h5V14z">
+                                </path>
+                                <path fill="#0288D1"
+                                    d="M16,24h-5v-5h5V24z M26,19h-5v5h5V19z M26,9h-5v5h5V9z M21,14h-5v5h5V14z"></path>
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Docker</h4>
+                        </div>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-category="tools" data-level="85" data-years="1.5">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0 0 48 48">
+                                <circle cx="24" cy="24" r="20" fill="#ffca28"></circle>
+                                <polygon fill="#fff"
+                                    points="30.4,32.7 28.6,30.3 32,27.75 32,20.25 28.6,17.7 30.4,15.3 35,18.75 35,29.25">
+                                </polygon>
+                                <polygon fill="#fff"
+                                    points="17.6,32.7 13,29.25 13,18.75 17.6,15.3 19.4,17.7 16,20.25 16,27.75 19.4,30.3">
+                                </polygon>
+                                <circle cx="19.5" cy="23.5" r="1.5" fill="#fff"></circle>
+                                <circle cx="24" cy="23.5" r="1.5" fill="#fff"></circle>
+                                <circle cx="28.5" cy="23.5" r="1.5" fill="#fff"></circle>
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Swagger</h4>
+                        </div>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-category="tools" data-level="80" data-years="0.5">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0 0 64 64">
+                                <linearGradient id="McNNGNAksUGwd4dZoMtSia_fOhLNqGJsUbJ_gr1" x1="25" x2="25" y1="24.681"
+                                    y2="35.468" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#6dc7ff"></stop>
+                                    <stop offset=".699" stop-color="#e6abff"></stop>
+                                </linearGradient>
+                                <circle cx="25" cy="32" r="6" fill="url(#McNNGNAksUGwd4dZoMtSia_fOhLNqGJsUbJ_gr1)">
+                                </circle>
+                                <linearGradient id="McNNGNAksUGwd4dZoMtSib_fOhLNqGJsUbJ_gr2" x1="25" x2="25" y1="2.683"
+                                    y2="15.247" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#6dc7ff"></stop>
+                                    <stop offset=".699" stop-color="#e6abff"></stop>
+                                </linearGradient>
+                                <circle cx="25" cy="9" r="5" fill="url(#McNNGNAksUGwd4dZoMtSib_fOhLNqGJsUbJ_gr2)">
+                                </circle>
+                                <linearGradient id="McNNGNAksUGwd4dZoMtSic_fOhLNqGJsUbJ_gr3" x1="45.5" x2="45.5"
+                                    y1="14.815" y2="26.122" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#6dc7ff"></stop>
+                                    <stop offset=".699" stop-color="#e6abff"></stop>
+                                </linearGradient>
+                                <path fill="url(#McNNGNAksUGwd4dZoMtSic_fOhLNqGJsUbJ_gr3)"
+                                    d="M49.4,18.25c0.6,1.04,0.76,2.25,0.45,3.41 c-0.31,1.17-1.06,2.14-2.1,2.74c-0.69,0.39-1.46,0.6-2.24,0.6c-0.39,0-0.79-0.05-1.17-0.15c-1.17-0.31-2.14-1.06-2.74-2.1 c-0.6-1.04-0.76-2.25-0.45-3.41c0.31-1.17,1.06-2.14,2.1-2.74c0.69-0.39,1.46-0.6,2.24-0.6c0.39,0,0.79,0.05,1.17,0.15 C47.83,16.46,48.8,17.21,49.4,18.25z">
+                                </path>
+                                <linearGradient id="McNNGNAksUGwd4dZoMtSid_fOhLNqGJsUbJ_gr4" x1="45.5" x2="45.5"
+                                    y1="38.414" y2="49.233" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#6dc7ff"></stop>
+                                    <stop offset=".699" stop-color="#e6abff"></stop>
+                                </linearGradient>
+                                <path fill="url(#McNNGNAksUGwd4dZoMtSid_fOhLNqGJsUbJ_gr4)"
+                                    d="M49.85,42.34 c0.31,1.16,0.15,2.37-0.45,3.41c-0.6,1.04-1.57,1.79-2.73,2.1c-0.39,0.1-0.79,0.15-1.18,0.15c-0.78,0-1.55-0.21-2.24-0.6 c-1.04-0.6-1.79-1.57-2.1-2.74c-0.31-1.16-0.15-2.37,0.45-3.41c0.6-1.04,1.57-1.79,2.73-2.1c0.39-0.1,0.79-0.15,1.18-0.15 c0.78,0,1.55,0.21,2.24,0.6C48.79,40.2,49.54,41.17,49.85,42.34z">
+                                </path>
+                                <linearGradient id="McNNGNAksUGwd4dZoMtSie_fOhLNqGJsUbJ_gr5" x1="25" x2="25" y1="48.976"
+                                    y2="58.584" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#6dc7ff"></stop>
+                                    <stop offset=".699" stop-color="#e6abff"></stop>
+                                </linearGradient>
+                                <circle cx="25" cy="55" r="5" fill="url(#McNNGNAksUGwd4dZoMtSie_fOhLNqGJsUbJ_gr5)">
+                                </circle>
+                                <linearGradient id="McNNGNAksUGwd4dZoMtSif_fOhLNqGJsUbJ_gr6" x1="34.503" x2="34.503"
+                                    y1="0" y2="64" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#1a6dff"></stop>
+                                    <stop offset="1" stop-color="#c822ff"></stop>
+                                </linearGradient>
+                                <path fill="url(#McNNGNAksUGwd4dZoMtSif_fOhLNqGJsUbJ_gr6)"
+                                    d="M49.75,36.14 C48.44,35.38,46.99,35,45.51,35c-0.74,0-1.48,0.09-2.21,0.29c-1.94,0.52-3.6,1.68-4.74,3.31l-4.43-2.54C34.68,34.82,35,33.45,35,32 s-0.32-2.82-0.87-4.06l4.43-2.54c1.14,1.63,2.8,2.79,4.74,3.31c0.73,0.2,1.48,0.29,2.21,0.29c1.48,0,2.93-0.38,4.24-1.14 c1.97-1.13,3.37-2.97,3.96-5.16c0.59-2.19,0.29-4.48-0.85-6.45c-1.13-1.97-2.97-3.37-5.16-3.96c-0.73-0.2-1.47-0.29-2.21-0.29 c-1.48,0-2.93,0.38-4.24,1.14c-1.97,1.13-3.37,2.97-3.96,5.16c-0.48,1.79-0.36,3.65,0.32,5.34l-4.48,2.56 c-1.63-2.28-4.19-3.86-7.13-4.15v-4.11c4.49-0.5,8-4.32,8-8.94c0-4.96-4.04-9-9-9s-9,4.04-9,9c0,4.62,3.51,8.44,8,8.94v4.11 c-5.05,0.5-9,4.77-9,9.95s3.95,9.45,9,9.95v4.11c-4.49,0.5-8,4.32-8,8.94c0,4.96,4.04,9,9,9s9-4.04,9-9c0-4.62-3.51-8.44-8-8.94 v-4.11c2.94-0.29,5.5-1.87,7.13-4.15l4.48,2.56c-0.68,1.69-0.8,3.55-0.32,5.34c0.59,2.19,1.99,4.03,3.96,5.16 c1.31,0.76,2.76,1.14,4.24,1.14c0.73,0,1.48-0.09,2.21-0.29c2.19-0.59,4.03-1.99,5.16-3.96c1.14-1.97,1.44-4.26,0.85-6.45 C53.12,39.11,51.72,37.27,49.75,36.14z M39.22,18.82c0.45-1.68,1.53-3.08,3.03-3.95c1-0.58,2.11-0.87,3.24-0.87 c0.56,0,1.13,0.07,1.69,0.22c1.68,0.45,3.08,1.53,3.95,3.03s1.1,3.25,0.65,4.93c-0.45,1.68-1.53,3.08-3.03,3.95 c-1,0.58-2.11,0.87-3.24,0.87c-0.56,0-1.13-0.07-1.69-0.22c-1.68-0.45-3.08-1.53-3.95-3.03S38.77,20.5,39.22,18.82z M25,62 c-3.86,0-7-3.14-7-7s3.14-7,7-7s7,3.14,7,7S28.86,62,25,62z M25,40c-4.41,0-8-3.59-8-8c0-4.41,3.59-8,8-8s8,3.59,8,8 C33,36.41,29.41,40,25,40z M25,2c3.86,0,7,3.14,7,7s-3.14,7-7,7s-7-3.14-7-7S21.14,2,25,2z M47.18,49.78 C46.62,49.93,46.06,50,45.49,50c-1.13,0-2.24-0.29-3.24-0.87c-1.5-0.87-2.58-2.27-3.03-3.95c-0.45-1.68-0.22-3.43,0.65-4.93 s2.27-2.58,3.95-3.03c0.56-0.15,1.13-0.22,1.69-0.22c1.13,0,2.24,0.29,3.24,0.87c1.5,0.87,2.58,2.27,3.03,3.95 c0.45,1.68,0.22,3.43-0.65,4.93S48.86,49.33,47.18,49.78z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Apache Kafka</h4>
+                        </div>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-category="tools" data-level="80" data-years="0.5">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0 0 64 64">
+                                <path
+                                    d="M 31.880859 3 C 27.661475 3.013642 23.379516 3.9528594 19.330078 5.9199219 C 12.416078 9.2789219 7.1204219 15.247719 4.6074219 22.511719 C -0.63657812 37.637719 7.3749531 54.149578 22.501953 59.392578 C 37.628953 64.635578 54.140766 56.624047 59.384766 41.498047 C 61.928766 34.228047 61.453453 26.240266 58.064453 19.322266 C 53.036797 8.9744219 42.663731 2.9651371 31.880859 3 z M 31.533203 4.9863281 C 34.613636 4.9329984 37.755719 5.4107969 40.835938 6.4785156 C 47.596938 8.8225156 53.151391 13.755359 56.275391 20.193359 C 59.400391 26.631359 59.837141 34.048547 57.494141 40.810547 C 52.613141 54.890547 37.243109 62.34875 23.162109 57.46875 C 9.0811094 52.58875 1.6239062 37.217719 6.5039062 23.136719 C 10.316406 12.135938 20.531658 5.1767914 31.533203 4.9863281 z M 31.638672 8.3183594 C 30.803672 8.3063594 29.968719 8.3399688 29.136719 8.4179688 C 28.584719 8.4359688 28.152875 8.8982188 28.171875 9.4492188 C 28.189875 10.001219 28.652125 10.433063 29.203125 10.414062 C 29.244125 10.413063 29.287125 10.409344 29.328125 10.402344 C 30.080125 10.324344 30.834844 10.286063 31.589844 10.289062 C 32.136844 10.213062 32.517406 9.7081094 32.441406 9.1621094 C 32.382406 8.7381094 32.059672 8.3983594 31.638672 8.3183594 z M 25.052734 9.2421875 C 24.923656 9.2280156 24.7885 9.2397969 24.65625 9.2792969 C 17.61925 11.420297 12.025656 16.787469 9.5976562 23.730469 C 9.4016563 24.246469 9.6617344 24.823531 10.177734 25.019531 C 10.693734 25.215531 11.270797 24.957406 11.466797 24.441406 C 11.473797 24.424406 11.479375 24.406672 11.484375 24.388672 L 11.449219 24.423828 C 13.664219 18.065828 18.787469 13.147359 25.230469 11.193359 C 25.759469 11.035359 26.058391 10.478219 25.900391 9.9492188 C 25.781891 9.5524687 25.439969 9.2847031 25.052734 9.2421875 z M 44.9375 14.75 C 42.5555 14.75 40.626953 16.6805 40.626953 19.0625 C 40.626953 21.4445 42.5565 23.376953 44.9375 23.376953 C 45.5515 23.376953 46.133109 23.243719 46.662109 23.011719 L 43.498047 19.742188 C 43.432047 19.674187 43.396391 19.581328 43.400391 19.486328 C 43.403391 19.391328 43.446578 19.301281 43.517578 19.238281 L 47.535156 15.640625 C 46.811156 15.089625 45.9175 14.75 44.9375 14.75 z M 48.0625 16.105469 L 44.253906 19.517578 L 47.298828 22.664062 C 48.471828 21.893062 49.248047 20.5715 49.248047 19.0625 C 49.248047 17.9145 48.7935 16.878469 48.0625 16.105469 z M 47.982422 18.152344 C 48.117234 18.144234 48.249953 18.21475 48.314453 18.34375 C 48.332453 18.38075 48.7595 19.26225 48.1875 20.40625 C 48.1265 20.52925 48.003 20.599609 47.875 20.599609 C 47.823 20.599609 47.76875 20.5875 47.71875 20.5625 C 47.54575 20.4765 47.4755 20.26775 47.5625 20.09375 C 47.9715 19.27675 47.6985 18.677344 47.6875 18.652344 C 47.6055 18.479344 47.677609 18.2715 47.849609 18.1875 C 47.892609 18.16675 47.937484 18.155047 47.982422 18.152344 z M 39.408203 21.658203 C 38.765203 21.685953 38.0355 21.842 37.25 22.125 C 34.125 23.25 30.375 27.375 30.375 27.375 L 27.367188 30.863281 L 29.835938 33.289062 L 41.044922 21.962891 C 40.607422 21.731891 40.051203 21.630453 39.408203 21.658203 z M 41.601562 22.396484 L 30.333984 33.78125 L 31.789062 35.212891 L 40.25 26.630859 C 40.275 26.606859 42.099766 24.806031 42.009766 23.207031 C 41.926766 22.890031 41.791562 22.615484 41.601562 22.396484 z M 41.771484 25.876953 C 41.285484 26.589953 40.785188 27.085953 40.742188 27.126953 L 32.287109 35.701172 L 33.410156 36.806641 C 33.524156 36.702641 33.634047 36.606 33.748047 36.5 C 39.841047 30.85 41.123484 28.439953 41.771484 25.876953 z M 26.908203 31.394531 L 24.125 34.625 L 29.228516 33.675781 L 26.908203 31.394531 z M 29.720703 34.158203 L 27.962891 35.978516 L 31.083984 35.498047 L 29.720703 34.158203 z M 31.705078 36.111328 L 27.160156 36.810547 L 18.828125 45.433594 L 22.324219 48.871094 L 22.5 48.875 L 21.625 45.25 C 21.625 45.25 26.445578 43.060391 32.892578 37.275391 L 31.705078 36.111328 z M 51.742188 37.121094 C 51.358984 37.191078 51.037266 37.482469 50.947266 37.886719 C 50.834266 38.393719 51.127047 38.903594 51.623047 39.058594 L 53.552734 39.574219 C 54.091734 39.694219 54.626094 39.355406 54.746094 38.816406 C 54.859094 38.309406 54.564359 37.799531 54.068359 37.644531 L 52.140625 37.128906 C 52.005875 37.098906 51.869922 37.097766 51.742188 37.121094 z M 50.042969 41.828125 C 49.654844 41.794 49.265766 41.990219 49.072266 42.355469 C 48.826266 42.819469 48.981734 43.394875 49.427734 43.671875 L 51.158203 44.667969 C 51.640203 44.942969 52.254297 44.774969 52.529297 44.292969 C 52.804297 43.810969 52.636297 43.196875 52.154297 42.921875 L 50.423828 41.941406 C 50.301828 41.876656 50.172344 41.8395 50.042969 41.828125 z M 46.832031 45.832031 C 46.576406 45.832031 46.322453 45.93 46.126953 46.125 C 45.736953 46.515 45.736953 47.147109 46.126953 47.537109 L 47.539062 48.951172 C 47.929063 49.341172 48.561172 49.341172 48.951172 48.951172 C 49.341172 48.561172 49.341172 47.927109 48.951172 47.537109 L 47.539062 46.125 C 47.344063 45.93 47.087656 45.832031 46.832031 45.832031 z M 18.341797 45.9375 L 15.625 48.75 L 21.308594 48.853516 L 18.341797 45.9375 z M 42.669922 48.9375 C 42.541453 48.953781 42.415875 48.995453 42.296875 49.064453 C 41.821875 49.342453 41.659547 49.953688 41.935547 50.429688 L 42.925781 52.152344 C 43.184781 52.640344 43.788391 52.825406 44.275391 52.566406 C 44.763391 52.307406 44.948453 51.703797 44.689453 51.216797 C 44.678453 51.196797 44.66825 51.17525 44.65625 51.15625 L 43.660156 49.425781 C 43.451656 49.068781 43.055328 48.888656 42.669922 48.9375 z M 38.236328 50.886719 C 38.107875 50.867922 37.975297 50.873453 37.841797 50.908203 C 37.839797 50.909203 37.838891 50.908203 37.837891 50.908203 C 37.304891 51.050203 36.985906 51.599813 37.128906 52.132812 C 37.129906 52.134813 37.129859 52.135672 37.130859 52.138672 L 37.646484 54.068359 C 37.811484 54.595359 38.372437 54.887656 38.898438 54.722656 C 39.394438 54.567656 39.689172 54.059734 39.576172 53.552734 L 39.060547 51.623047 C 38.956297 51.222547 38.621688 50.943109 38.236328 50.886719 z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Postman</h4>
+                        </div>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+
+                <!-- AI Tools -->
+                <div class="skill-item" data-category="tools" data-level="80" data-years="1">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0 0 48 48">
+                                <path fill="#fff"
+                                    d="M45.898,36.731c0.354,1.015,0.269,2.096-0.203,3.037c-0.34,0.686-0.826,1.217-1.42,1.692	c-0.717,0.564-1.609,1.043-2.684,1.504c-1.283,0.545-2.849,1.058-3.567,1.246c-1.835,0.475-3.599,0.776-5.388,0.79	c-2.557,0.023-4.76-0.578-6.326-2.115c-0.811,0.099-1.632,0.155-2.458,0.155c-0.783,0-1.557-0.047-2.326-0.141	c-1.571,1.528-3.765,2.125-6.312,2.101c-1.788-0.014-3.552-0.315-5.392-0.79c-0.712-0.188-2.279-0.7-3.562-1.246	c-1.076-0.461-1.967-0.94-2.68-1.504c-0.599-0.475-1.085-1.006-1.425-1.692c-0.467-0.94-0.557-2.021-0.198-3.037	c-0.33-0.776-0.415-1.664-0.156-2.646c0.118-0.446,0.311-0.86,0.557-1.227c-0.052-0.193-0.094-0.39-0.123-0.606	c-0.179-1.288,0.269-2.463,1.113-3.375c0.415-0.456,0.863-0.771,1.33-0.973c-0.344-1.457-0.524-2.957-0.524-4.489	c0-10.839,8.817-19.625,19.696-19.625c3.736,0,7.232,1.034,10.214,2.839c0.538,0.329,1.066,0.682,1.571,1.058	c0.25,0.188,0.5,0.381,0.741,0.583c0.245,0.197,0.486,0.404,0.717,0.616c0.698,0.635,1.354,1.316,1.953,2.045	c0.203,0.24,0.396,0.489,0.585,0.743c0.382,0.503,0.736,1.025,1.061,1.565c0.495,0.809,0.929,1.655,1.307,2.534	c0.25,0.588,0.467,1.189,0.66,1.805c0.288,0.921,0.51,1.871,0.661,2.849c0.047,0.324,0.09,0.653,0.123,0.982	c0.066,0.658,0.104,1.326,0.104,2.007c0,1.514-0.179,2.999-0.514,4.433c0.519,0.202,1.01,0.531,1.467,1.029	c0.844,0.912,1.293,2.092,1.113,3.38c-0.028,0.212-0.071,0.409-0.123,0.602c0.245,0.367,0.439,0.78,0.557,1.227	C46.309,35.067,46.224,35.955,45.898,36.731z">
+                                </path>
+                                <linearGradient id="G0Jpwzc9gkuJdD7CvJwJVa_sop9ROXku5bb_gr1" x1="5.66" x2="42.193"
+                                    y1="23.549" y2="23.549" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#ff8100"></stop>
+                                    <stop offset="1" stop-color="#ff8100"></stop>
+                                </linearGradient>
+                                <path fill="url(#G0Jpwzc9gkuJdD7CvJwJVa_sop9ROXku5bb_gr1)"
+                                    d="M40.307,23.548c0-8.992-7.334-16.281-16.381-16.281S7.546,14.557,7.546,23.548	s7.334,16.281,16.381,16.281S40.307,32.54,40.307,23.548z M5.66,23.548c0-10.027,8.178-18.155,18.266-18.155	s18.266,8.128,18.266,18.155s-8.178,18.155-18.266,18.155S5.66,33.575,5.66,23.548z">
+                                </path>
+                                <linearGradient id="G0Jpwzc9gkuJdD7CvJwJVb_sop9ROXku5bb_gr2" x1="13.866" x2="35.058"
+                                    y1="8.398" y2="40.313" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#ffd21e"></stop>
+                                    <stop offset=".364" stop-color="#feca17"></stop>
+                                    <stop offset=".941" stop-color="#fbb302"></stop>
+                                    <stop offset="1" stop-color="#fbb000"></stop>
+                                </linearGradient>
+                                <path fill="url(#G0Jpwzc9gkuJdD7CvJwJVb_sop9ROXku5bb_gr2)"
+                                    d="M23.926,39.921	c9.104,0,16.484-7.33,16.484-16.373S33.03,7.176,23.926,7.176S7.442,14.506,7.442,23.548S14.823,39.921,23.926,39.921z">
+                                </path>
+                                <linearGradient id="G0Jpwzc9gkuJdD7CvJwJVc_sop9ROXku5bb_gr3" x1="4.956" x2="20.549"
+                                    y1="34.897" y2="34.897" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#ffd21e"></stop>
+                                    <stop offset=".364" stop-color="#feca17"></stop>
+                                    <stop offset=".941" stop-color="#fbb302"></stop>
+                                    <stop offset="1" stop-color="#fbb000"></stop>
+                                </linearGradient>
+                                <path fill="url(#G0Jpwzc9gkuJdD7CvJwJVc_sop9ROXku5bb_gr3)"
+                                    d="M19.667,39.803	c1.3-1.876,1.208-3.284-0.576-5.038c-1.784-1.754-2.822-4.32-2.822-4.32s-0.388-1.49-1.271-1.353	c-0.883,0.137-1.532,2.364,0.318,3.727c1.85,1.362-0.369,2.288-1.08,1.008c-0.712-1.279-2.656-4.568-3.664-5.197	c-1.008-0.629-1.717-0.277-1.48,1.02c0.238,1.297,4.452,4.439,4.042,5.119c-0.41,0.68-1.855-0.799-1.855-0.799	s-4.522-4.049-5.506-2.994c-0.985,1.055,0.747,1.939,3.214,3.409c2.468,1.469,2.659,1.858,2.309,2.414	c-0.351,0.556-5.797-3.963-6.309-2.047c-0.511,1.916,5.559,2.472,5.184,3.794c-0.375,1.323-4.276-2.503-5.074-1.012	c-0.798,1.491,5.505,3.243,5.556,3.256C12.69,41.308,17.861,42.409,19.667,39.803z">
+                                </path>
+                                <linearGradient id="G0Jpwzc9gkuJdD7CvJwJVd_sop9ROXku5bb_gr4" x1="3.166" x2="22.381"
+                                    y1="34.962" y2="34.962" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#ff8100"></stop>
+                                    <stop offset="1" stop-color="#ff8100"></stop>
+                                </linearGradient>
+                                <path fill="url(#G0Jpwzc9gkuJdD7CvJwJVd_sop9ROXku5bb_gr4)"
+                                    d="M9.759,26.511	c-0.759,0-1.438,0.31-1.911,0.872c-0.293,0.348-0.598,0.909-0.623,1.749C6.906,29.041,6.6,28.99,6.314,28.99	c-0.727,0-1.383,0.277-1.847,0.78c-0.596,0.645-0.861,1.438-0.746,2.232c0.055,0.378,0.182,0.717,0.372,1.03	c-0.4,0.322-0.695,0.77-0.838,1.309c-0.112,0.423-0.226,1.303,0.371,2.209c-0.038,0.059-0.074,0.121-0.107,0.184	c-0.359,0.677-0.382,1.443-0.065,2.156c0.481,1.08,1.675,1.932,3.994,2.845c1.443,0.568,2.763,0.932,2.774,0.935	c1.907,0.492,3.632,0.741,5.125,0.741c2.745,0,4.71-0.835,5.841-2.483c1.82-2.653,1.56-5.08-0.795-7.419	c-1.303-1.294-2.17-3.203-2.35-3.622c-0.364-1.24-1.326-2.619-2.925-2.619h0c-0.135,0-0.271,0.011-0.405,0.032	c-0.701,0.109-1.313,0.51-1.75,1.113c-0.472-0.583-0.931-1.047-1.346-1.309C10.991,26.711,10.366,26.511,9.759,26.511z M9.759,28.375c0.239,0,0.531,0.101,0.853,0.304c1,0.63,2.93,3.927,3.636,5.209c0.237,0.43,0.641,0.611,1.006,0.611	c0.723,0,1.287-0.714,0.066-1.622c-1.836-1.366-1.192-3.598-0.316-3.735c0.038-0.006,0.076-0.009,0.113-0.009	c0.797,0,1.149,1.365,1.149,1.365s1.03,2.572,2.801,4.33c1.77,1.758,1.862,3.17,0.572,5.05c-0.88,1.282-2.565,1.45-4.291,1.45	c-1.791,0-3.629-0.314-4.658-0.579c-0.051-0.013-6.303-1.652-5.511-3.147c0.133-0.251,0.353-0.352,0.629-0.352	c1.116,0,3.146,1.65,4.018,1.65c0.195,0,0.34-0.15,0.397-0.351c0.388-1.389-5.661-1.815-5.153-3.735	c0.09-0.34,0.332-0.478,0.674-0.477c1.475,0,4.783,2.577,5.476,2.577c0.053,0,0.091-0.015,0.112-0.048	c0.347-0.557,0.187-1.011-2.261-2.484c-2.449-1.473-4.198-2.295-3.22-3.352c0.113-0.122,0.272-0.176,0.466-0.176	c1.487,0,4.999,3.177,4.999,3.177s0.948,0.98,1.522,0.98c0.132,0,0.244-0.052,0.32-0.179c0.406-0.681-3.776-3.831-4.012-5.13	C8.984,28.821,9.255,28.375,9.759,28.375z">
+                                </path>
+                                <linearGradient id="G0Jpwzc9gkuJdD7CvJwJVe_sop9ROXku5bb_gr5" x1="27.223" x2="42.816"
+                                    y1="34.897" y2="34.897" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#ffd21e"></stop>
+                                    <stop offset=".364" stop-color="#feca17"></stop>
+                                    <stop offset=".941" stop-color="#fbb302"></stop>
+                                    <stop offset="1" stop-color="#fbb000"></stop>
+                                </linearGradient>
+                                <path fill="url(#G0Jpwzc9gkuJdD7CvJwJVe_sop9ROXku5bb_gr5)"
+                                    d="M28.105,39.803	c-1.3-1.876-1.208-3.284,0.576-5.038c1.784-1.754,2.822-4.32,2.822-4.32s0.388-1.49,1.271-1.353	c0.883,0.137,1.532,2.364-0.318,3.727c-1.85,1.362,0.368,2.288,1.08,1.008c0.712-1.279,2.656-4.568,3.664-5.197	c1.008-0.629,1.717-0.277,1.48,1.02c-0.238,1.297-4.452,4.439-4.042,5.119c0.41,0.68,1.855-0.799,1.855-0.799	S41.016,29.92,42,30.975c0.984,1.055-0.747,1.939-3.214,3.409c-2.468,1.469-2.659,1.858-2.309,2.414	c0.351,0.556,5.797-3.963,6.309-2.047c0.511,1.916-5.559,2.472-5.184,3.794c0.375,1.323,4.276-2.503,5.074-1.012	c0.798,1.491-5.505,3.243-5.556,3.256C35.083,41.308,29.912,42.409,28.105,39.803z">
+                                </path>
+                                <linearGradient id="G0Jpwzc9gkuJdD7CvJwJVf_sop9ROXku5bb_gr6" x1="25.391" x2="44.607"
+                                    y1="34.962" y2="34.962" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#ff8100"></stop>
+                                    <stop offset="1" stop-color="#ff8100"></stop>
+                                </linearGradient>
+                                <path fill="url(#G0Jpwzc9gkuJdD7CvJwJVf_sop9ROXku5bb_gr6)"
+                                    d="M38.014,26.511	c0.759,0,1.437,0.31,1.911,0.872c0.293,0.348,0.598,0.909,0.623,1.749c0.318-0.091,0.624-0.142,0.91-0.142	c0.727,0,1.383,0.277,1.847,0.78c0.596,0.645,0.861,1.438,0.746,2.232c-0.055,0.378-0.182,0.717-0.372,1.03	c0.4,0.322,0.695,0.77,0.838,1.309c0.112,0.423,0.226,1.303-0.371,2.209c0.038,0.059,0.074,0.121,0.107,0.184	c0.359,0.677,0.382,1.443,0.065,2.156c-0.481,1.08-1.675,1.932-3.994,2.845c-1.443,0.568-2.763,0.932-2.774,0.935	c-1.907,0.492-3.632,0.741-5.126,0.741c-2.745,0-4.71-0.835-5.841-2.483c-1.82-2.653-1.56-5.08,0.795-7.419	c1.303-1.294,2.17-3.203,2.35-3.622c0.364-1.24,1.326-2.619,2.925-2.619h0c0.135,0,0.271,0.011,0.405,0.032	c0.7,0.109,1.313,0.51,1.75,1.113c0.472-0.583,0.931-1.047,1.346-1.309C36.781,26.711,37.406,26.511,38.014,26.511z M38.014,28.375	c-0.239,0-0.531,0.101-0.853,0.304c-1,0.63-2.93,3.927-3.636,5.209c-0.237,0.43-0.641,0.611-1.006,0.611	c-0.723,0-1.287-0.714-0.066-1.622c1.837-1.366,1.192-3.598,0.316-3.735c-0.038-0.006-0.076-0.009-0.113-0.009	c-0.797,0-1.149,1.365-1.149,1.365s-1.031,2.572-2.801,4.33c-1.77,1.758-1.862,3.17-0.572,5.05c0.88,1.282,2.565,1.45,4.291,1.45	c1.791,0,3.629-0.314,4.658-0.579c0.051-0.013,6.303-1.652,5.511-3.147c-0.133-0.251-0.353-0.352-0.629-0.352	c-1.116,0-3.146,1.65-4.018,1.65c-0.195,0-0.34-0.15-0.397-0.351c-0.388-1.389,5.661-1.815,5.153-3.735	c-0.09-0.34-0.332-0.478-0.674-0.477c-1.475,0-4.783,2.577-5.476,2.577c-0.053,0-0.091-0.015-0.112-0.048	c-0.347-0.557-0.187-1.011,2.261-2.484c2.449-1.473,4.198-2.295,3.22-3.352c-0.112-0.122-0.272-0.176-0.466-0.176	c-1.487,0-4.999,3.177-4.999,3.177s-0.948,0.98-1.521,0.98c-0.132,0-0.244-0.052-0.32-0.179c-0.406-0.681,3.776-3.831,4.012-5.13	C38.789,28.821,38.517,28.375,38.014,28.375z">
+                                </path>
+                                <linearGradient id="G0Jpwzc9gkuJdD7CvJwJVg_sop9ROXku5bb_gr7" x1="17.867" x2="30.099"
+                                    y1="26.353" y2="26.353" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#41474a"></stop>
+                                    <stop offset="1" stop-color="#323538"></stop>
+                                </linearGradient>
+                                <path fill="url(#G0Jpwzc9gkuJdD7CvJwJVg_sop9ROXku5bb_gr7)"
+                                    d="M30.099,24.186	c0-2.109-2.735,1.105-6.116,1.119c-3.381-0.014-6.116-3.228-6.116-1.119c0,1.398,0.669,3.672,2.465,5.051	c0.357-1.23,2.322-2.215,2.603-2.074c0.4,0.201,0.377,0.76,1.048,1.252c0.671-0.492,0.648-1.05,1.048-1.252	c0.281-0.141,2.245,0.844,2.602,2.074C29.43,27.857,30.099,25.584,30.099,24.186L30.099,24.186z">
+                                </path>
+                                <linearGradient id="G0Jpwzc9gkuJdD7CvJwJVh_sop9ROXku5bb_gr8" x1="20.333" x2="27.634"
+                                    y1="28.782" y2="28.782" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#f52537"></stop>
+                                    <stop offset="1" stop-color="#c8202c"></stop>
+                                </linearGradient>
+                                <path fill="url(#G0Jpwzc9gkuJdD7CvJwJVh_sop9ROXku5bb_gr8)"
+                                    d="M25.031,27.163	c-0.4,0.201-0.377,0.76-1.048,1.252c-0.67-0.492-0.648-1.05-1.048-1.252c-0.281-0.141-2.245,0.844-2.602,2.074	c0.908,0.697,2.105,1.166,3.649,1.178c0,0,0.001,0,0.001,0c0,0,0.001,0,0.001,0c1.544-0.011,2.741-0.48,3.649-1.178	C27.277,28.007,25.312,27.021,25.031,27.163L25.031,27.163z">
+                                </path>
+                                <linearGradient id="G0Jpwzc9gkuJdD7CvJwJVi_sop9ROXku5bb_gr9" x1="33.371" x2="36.401"
+                                    y1="19.739" y2="19.739" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#ff8100"></stop>
+                                    <stop offset="1" stop-color="#ff8100"></stop>
+                                </linearGradient>
+                                <path fill="url(#G0Jpwzc9gkuJdD7CvJwJVi_sop9ROXku5bb_gr9)"
+                                    d="M34.886,21.254	c0.837,0,1.515-0.678,1.515-1.515c0-0.837-0.678-1.515-1.515-1.515c-0.837,0-1.515,0.678-1.515,1.515	C33.371,20.576,34.05,21.254,34.886,21.254z">
+                                </path>
+                                <linearGradient id="G0Jpwzc9gkuJdD7CvJwJVj_sop9ROXku5bb_gr10" x1="11.541" x2="14.571"
+                                    y1="19.739" y2="19.739" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#ff8100"></stop>
+                                    <stop offset="1" stop-color="#ff8100"></stop>
+                                </linearGradient>
+                                <path fill="url(#G0Jpwzc9gkuJdD7CvJwJVj_sop9ROXku5bb_gr10)"
+                                    d="M13.056,21.254	c0.837,0,1.515-0.678,1.515-1.515c0-0.837-0.678-1.515-1.515-1.515c-0.837,0-1.515,0.678-1.515,1.515	C11.541,20.576,12.219,21.254,13.056,21.254z">
+                                </path>
+                                <linearGradient id="G0Jpwzc9gkuJdD7CvJwJVk_sop9ROXku5bb_gr11" x1="27.53" x2="32.24"
+                                    y1="18.015" y2="18.015" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#41474a"></stop>
+                                    <stop offset="1" stop-color="#323538"></stop>
+                                </linearGradient>
+                                <path fill="url(#G0Jpwzc9gkuJdD7CvJwJVk_sop9ROXku5bb_gr11)"
+                                    d="M29.545,19.08	c0.6,0.211,0.839,1.442,1.445,1.12c1.148-0.609,1.584-2.031,0.974-3.176c-0.611-1.145-2.036-1.58-3.185-0.971	c-1.148,0.609-1.584,2.031-0.974,3.176C28.094,19.77,29.009,18.891,29.545,19.08z">
+                                </path>
+                                <linearGradient id="G0Jpwzc9gkuJdD7CvJwJVl_sop9ROXku5bb_gr12" x1="15.757" x2="20.467"
+                                    y1="18.015" y2="18.015" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#41474a"></stop>
+                                    <stop offset="1" stop-color="#323538"></stop>
+                                </linearGradient>
+                                <path fill="url(#G0Jpwzc9gkuJdD7CvJwJVl_sop9ROXku5bb_gr12)"
+                                    d="M18.451,19.08	c-0.6,0.211-0.839,1.442-1.445,1.12c-1.148-0.609-1.584-2.031-0.974-3.176c0.611-1.145,2.036-1.58,3.185-0.971	c1.148,0.609,1.584,2.031,0.974,3.176C19.903,19.77,18.988,18.891,18.451,19.08z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Hugging Face</h4>
+                        </div>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="skills-summary">
+                <div class="summary-card" data-animate="fadeUp">
+                    <div class="summary-icon">💡</div>
+                    <h3>Development Philosophy</h3>
+                    <p>I believe in writing clean, maintainable code with a focus on user experience and performance. My
+                        approach combines technical excellence with practical problem-solving to deliver impactful
+                        solutions.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <!-- Contact Section Component -->
+    <section id="contact" class="contact-component">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's discuss opportunities and collaborations</p>
+                <p class="section-subtitle">Let's discuss opportunities, collaborations, and innovative projects</p>
             </div>
-            <div class="contact-content">
+            <div class="contact-layout">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <h4>📍 Location</h4>
-                        <p>Galle, Sri Lanka</p>
+                    <div class="info-card interactive-card" data-animate="fadeUp">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h4>Location</h4>
+                            <p>Galle, Sri Lanka</p>
+                            <span class="info-detail">Available for remote work worldwide</span>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <h4>📧 Email</h4>
-                        <p>vidurawijesinghemap@gmail.com</p>
+                    <div class="info-card interactive-card" data-animate="fadeUp">
+                        <div class="info-icon">📧</div>
+                        <div class="info-content">
+                            <h4>Emails</h4>
+                            <p>contact@vidurawijesinghe.com</p>
+                            <!-- <p>hire@vidurawijesinghe.com</p> -->
+                            <span class="info-detail">Response within 24 hours</span>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <h4>💼 Professional Links</h4>
-                        <div class="contact-links">
-                            <a href="https://github.com/vidura626" target="_blank">GitHub</a>
-                            <a href="https://lk.linkedin.com/in/vidurawije626" target="_blank">LinkedIn</a>
+                    <div class="info-card interactive-card" data-animate="fadeUp">
+                        <div class="info-icon">💼</div>
+                        <div class="info-content">
+                            <h4>Professional Networks</h4>
+                            <div class="contact-links">
+                                <a href="https://github.com/vidura626" target="_blank" data-cursor="pointer">GitHub</a>
+                                <a href="https://lk.linkedin.com/in/vidurawije626" target="_blank"
+                                    data-cursor="pointer">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-card interactive-card" data-animate="fadeUp">
+                        <div class="info-icon">🕒</div>
+                        <div class="info-content">
+                            <h4>Availability</h4>
+                            <p>Open to new opportunities</p>
+                            <span class="availability-status">
+                                <span class="status-indicator active"></span>
+                                Currently available
+                            </span>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form-container">
+
+                <div class="contact-form-wrapper" data-animate="fadeUp" aria-disabled="true">
                     <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" name="name" class="form-control" required>
+                        <div class="form-header">
+                            <h3>Send Me a Message</h3>
+                            <p>I’d love to hear about your project or opportunity.</p>
+                            <p>Email: contact@vidurawijesinghe.com — click the send button to get in touch.</p>
                         </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
+
+                        <!-- <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                                <div class="form-validation" id="nameValidation"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                                <div class="form-validation" id="emailValidation"></div>
+                            </div>
                         </div>
+
                         <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-control" required>
+                            <label for="subject" class="form-label">Subject *</label>
+                            <select id="subject" name="subject" class="form-control" required>
+                                <option value="">Select a subject</option>
+                                <option value="job">Job Opportunity</option>
+                                <option value="project">Project Collaboration</option>
+                                <option value="consultation">Technical Consultation</option>
+                                <option value="freelance">Freelance Work</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="form-validation" id="subjectValidation"></div>
                         </div>
+
                         <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea id="message" name="message" class="form-control" rows="6" required
+                                placeholder="Tell me about your project, opportunity, or how we can work together..."></textarea>
+                            <div class="form-validation" id="messageValidation"></div>
+                            <div class="character-count">
+                                <span id="charCount">0</span>/500 characters
+                            </div>
+                        </div> -->
+
+                        <a href="mailto:contact@vidurawijesinghe.com"
+                            class="btn btn--primary btn--full-width btn--animated" data-cursor="pointer">
+                            <span class="btn-content">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-icon">📤</span>
+                            </span>
+                            <div class="btn-loader">
+                                <span class="loader-text">Sending...</span>
+                                <div class="loader-spinner"></div>
+                            </div>
+                            <div class="btn-ripple"></div>
+                        </a>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Footer Component -->
+    <footer class="footer-component">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Vidura Rames Wijesinghe. All rights reserved.</p>
+                <div class="footer-info">
+                    <h3>Vidura Rames Wijesinghe</h3>
+                    <p>Software Engineer & Team Lead</p>
+                    <p class="footer-tagline">Building innovative solutions with passion and precision</p>
+                </div>
                 <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
+                    <div class="footer-section">
+                        <h4>Navigation</h4>
+                        <a href="#home" data-cursor="pointer">Home</a>
+                        <a href="#about" data-cursor="pointer">About</a>
+                        <a href="#experience" data-cursor="pointer">Experience</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Portfolio</h4>
+                        <a href="#projects" data-cursor="pointer">Projects</a>
+                        <a href="#skills" data-cursor="pointer">Skills</a>
+                        <a href="#contact" data-cursor="pointer">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect with me</h4>
+                    <div class="social-links">
+                        <a href="mailto:vidurawijesinghemap@gmail.com" target="_blank" aria-label="Email"
+                            data-cursor="pointer">
+                            <span class="social-icon">📧</span>
+                            <span class="social-label">Email</span>
+                        </a>
+                        <a href="https://github.com/vidura626" target="_blank" aria-label="GitHub"
+                            data-cursor="pointer">
+                            <span class="social-icon">💻</span>
+                            <span class="social-label">GitHub</span>
+                        </a>
+                        <a href="https://lk.linkedin.com/in/vidurawije626" target="_blank" aria-label="LinkedIn"
+                            data-cursor="pointer">
+                            <span class="social-icon">🔗</span>
+                            <span class="social-label">LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Vidura Rames Wijesinghe. All rights reserved.</p>
+                    <p class="footer-build">Built with ❤️ using modern web technologies</p>
+                </div>
+                <div class="footer-back-to-top">
+                    <button class="back-to-top" id="backToTop" aria-label="Back to top" data-cursor="pointer">
+                        <span class="back-to-top-icon">↑</span>
+                    </button>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-animation">
+            <div class="loading-logo">
+                <span class="logo-text">VRW</span>
+                <div class="logo-glow"></div>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="loading-text">Loading...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <div class="fab-container" id="fabContainer">
+        <button class="fab-main" id="fabMain" aria-label="Quick actions" data-cursor="pointer">
+            <span class="fab-icon">⚡</span>
+        </button>
+        <div class="fab-options">
+            <button class="fab-option" data-action="theme" aria-label="Toggle theme">
+                <span class="fab-icon">🌓</span>
+            </button>
+            <button class="fab-option" data-action="contact" aria-label="Contact me">
+                <span class="fab-icon">📧</span>
+            </button>
+            <button class="fab-option" data-action="cv" aria-label="Download CV">
+                <span class="fab-icon">📄</span>
+            </button>
+        </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
+
 </html>
